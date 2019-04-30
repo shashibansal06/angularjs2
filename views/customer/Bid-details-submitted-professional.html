@@ -1,0 +1,200 @@
+<banner title="Bid Details Submitted by Professional"></banner>
+<div class="innercontentpage">
+    <div class="container inerPage">         
+        <div class="row box profileSection">           
+            <div class="col-sm-6 col-md-5">
+                <div class="imgPhoto">
+                    <div class="uploadedimg">
+                        <img src="assets/images/contactimg.jpg" alt="image" class="img-responsive">
+                    </div>
+                </div>
+                <h2>Albert Smith</h2>   
+                <div ng-init="starvalue = 1" class="ratingbox"> 
+                    <span uib-rating ng-model="starvalue" max="5" state-on="'icon-yellow-star'"  state-off="'icon-grey-star'"></span> 
+                    <b class="review"> {{starvalue}} <span>Reviews</span></b>
+                </div>                
+            </div>
+            <div class="col-sm-6 col-md-7 addresspreview">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p><i class="icon-loc"></i> 121 Cheert Ridge Road State College New York, NY</p>
+                    </div>
+                    <div class="col-md-6">
+                         <p><i class="icon-global"></i> www.abc.com</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p><i class="icon-phoneIcon"></i> 7911 123456</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p><i class="icon-mail"></i> albertsmith@gmail.com</p>
+                    </div>
+                </div>
+            </div>            
+        </div>
+        <div class="row box">
+            <div class="col-sm-12">
+                <h2>Description</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy txt
+                evers since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived ot only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release off Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including vrsnsof Lorem Ipsum</p>
+            </div>
+        </div>
+        <div class="row box">
+            <div class="col-sm-12">
+                <h2>Scope</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy txt
+                evers since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release off Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including vrsnsof Lorem Ipsum</p>
+            </div>
+        </div> 
+        <div class="row box">
+            <div class="col-sm-12">
+                <h2>What is not included?</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy txt evers since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived Ipsum</p>
+            </div>
+        </div> 
+        <div class="row box">
+            <div class="col-sm-12">
+                <h2>Photos</h2>               
+            </div>
+            <div class="col-sm-12 uploadPhoto">
+                <div class="imgOuter">
+                    <div class="userimage">
+                        <img src="assets/images/photoupload.png" class="img-responsive" alt="">
+                    </div>
+                </div>
+                <div class="imgOuter">
+                    <div class="userimage">
+                        <img src="assets/images/photoupload.png" class="img-responsive" alt="">
+                    </div>                        
+                </div>                        
+            </div>             
+        </div>
+        <div class="row box">
+            <div class="col-sm-12">
+                <h2>Files</h2>               
+            </div>
+            <div class="col-sm-12 uploadPhoto fileuploaded">
+                <div class="imgOuter">
+                    <div class="userimage">
+                        <img src="assets/images/docimage.png" class="img-responsive" alt="">
+                    </div>
+                    <span class="filename">Paint Specs</span>
+                </div>
+                <div class="imgOuter">
+                    <div class="userimage">
+                        <img src="assets/images/docimage.png" class="img-responsive" alt="">
+                    </div>
+                    <span class="filename">Color Pallete</span>  
+                </div>                      
+            </div>             
+        </div>
+        <div class="row box">
+            <div class="col-sm-12">
+                <h2>Customer Facing Materials Included?</h2> 
+                <p>Some (6/10)</p>                
+            </div>          
+        </div>       
+        <div class="row box">
+            <div class="col-sm-12">
+                <h2>Customer Facing Materials Included</h2>
+                <div class="table-responsive">
+                    <table class="table customTable">
+                        <thead>
+                            <tr> 
+                                <th>Quantity</th>
+                                <th>Unit</th>
+                                <th>Material</th>
+                                <th>Attribute 1</th>
+                                <th>Attribute 2</th>
+                                <th>Attribute 3</th>
+                                <th>Brand</th>                             
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="material_list in [1,2,3,4]">
+                                <td>1</td>
+                                <td>Gallon</td>                    
+                                <td>Paint</td>
+                                <td>White</td>         
+                                <td>High Durability</td>     
+                                <td>Highly Scrubable</td>
+                                <td>Brand Name</td>                           
+                            </tr>                                       
+                        </tbody>
+                    </table>
+                </div>   
+            </div>
+        </div>
+        <div class="row box">
+            <div class="col-sm-4">
+                <h2>Proposed Start Date</h2> 
+                <p>22-01-2017</p>
+            </div> 
+            <div class="col-sm-4">
+                <h2>Estimated End Date</h2>
+                <p>22-01-2017</p>                
+            </div>
+            <div class="col-sm-4">
+                <h2>Offer Valid Until</h2>
+                <p>22-01-2017</p>                
+            </div>
+        </div>
+        <div class="row box">
+            <div class="col-sm-12">
+                <h2>Warranty</h2> 
+                <p>We will give a warranty that the job will be good for 1 year - if the wall breaks again we will repair it at no cost</p>
+            </div>             
+        </div>
+        <!-- milestone section start -->
+        <div class="row box">
+            <div class="col-sm-12">
+                <h2>Milestones</h2>
+                <div class="table-responsive">
+                    <table class="table customTable">
+                        <thead>
+                            <tr> 
+                                <th>Milestone Title</th>
+                                <th>Milestone Description</th>
+                                <th>Amount</th>                                   
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr  ng-repeat="milestone_list in [1,2,3,4]">
+                                <td>Fix a wall paint (Milestone 1)</td>
+                                <td>We have to fix firstly the wall paint. It will take one day job</td>                    
+                                <td>$100</td>                                            
+                            </tr>                                                           
+                        </tbody>
+                    </table>
+                </div>   
+            </div>
+        </div> 
+        <!-- milestone section end -->
+        <div class="row box">
+            <div class="col-sm-5">
+                <h2>Total Price</h2> 
+                <p>$30,000</p>
+            </div> 
+            <div class="col-sm-7">
+                <p>Downpayment in Escrow : $10000</p>
+                <p>Remaining payment in Escrow : $20000</p>                
+            </div>
+        </div>
+        <div class="row box">
+            <div class="col-sm-12">
+                <h2>Disclaimer</h2> 
+                <p>By accepting a bid you are entering into a legal contract with the Professional you have selected, a sample of the contract can be seen <a class="underline orange" href="#">here</a> and it is intended to give you the basic protection you will need. The Professional might ask you to sign an additional contract as required by their Trade Association but the URevamp Renovation contract supersedes any other contract you might sign after accepting this bid, thus the terms you are accepting in this bid would remain unchanged.</p>
+            </div>             
+        </div>
+        <div class="row text-center bottom-btn">
+            <div class="col-sm-12">
+                <a data-ui-sref="main.contract" class="btn themeBtn min-width180 orange">Accept Bid</a>
+                <a data-ui-sref="main.post-detail-with-bid" class="btn themeBtn min-width180 yellow">Shortlisted Bid</a>
+                <a data-ui-sref="" class="btn themeBtn min-width180 navy">Disregard Bid</a>
+                <a data-ui-sref="main.my-project" class="btn themeBtn min-width180 mehroon">Reject Bid</a>
+            </div>
+        </div>        
+    </div>
+</div> 
+

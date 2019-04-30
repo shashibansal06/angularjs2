@@ -1,0 +1,380 @@
+.chatPage{
+    .PageSection {  
+        padding: 0 15px;
+        display: flex;
+        @media screen and (max-width: 767px) {
+            display: block;
+        }
+        .userBtnsearch{
+            background-color: #fff;
+            border-radius:10px;
+            span{
+                color: #000;
+                font-size: 18px;
+                line-height: 42px;
+                font-weight: bold;
+            }
+            .navbar-toggle{
+                &#serchbutton{ 
+                    padding: 0; 
+                    margin-top: 14px;
+                    span{
+                        background-color: #117ec2;
+                    }
+                }
+            }    
+        }
+        .inboxsidebar{
+            max-height: calc(100vh - 168px);
+            overflow-y: auto;
+            overflow-x: hidden;
+            @include pos(r, null);  
+            z-index: 1;
+            padding: 30px 0;
+            width:365px; 
+            background-color: $white;
+            @include box-shadow-n(0, 0, 7px, rgba(0,0,0,0.4));
+            @media screen and (max-width: 1300px) {
+                width:300px;
+            }
+            @media screen and (max-width: 992px) {
+                width:250px;
+            }
+            @media screen and (max-width: 992px) {
+                display: none;
+                @include pos(f, 15px null null 5%); 
+                width: 90%;
+                z-index: 999;
+                height: calc(100vh - 30px);
+                overflow-y:auto;
+                overflow-x:hidden;
+                max-height: 100vh;
+            }
+          
+            .searchbox{
+                @include pos(r, null); 
+                .btn{ 
+                    background-color: transparent;
+                    @include radius(0);
+                    @include pos(a, 0 null null 0);
+                    @include height-width(100%, 45px);
+                }
+                input{
+                    font-size: 18px;   
+                    padding-left:45px;                
+                }
+            }
+            ul{
+                height: calc(100vh - 275px);
+                overflow-y: scroll;
+                @media screen and (max-width: 992px) {
+                    height:calc(100vh - 130px);
+                }
+                li{
+                    padding: 15px 20px;
+                    cursor: pointer; 
+                    @media screen and (max-width: 992px) {
+                        padding: 10px 15px;
+                    }
+                    &:hover{
+                        background-color: #f5f6f8;
+                    }
+                    .profilePhoto {
+                        margin-right: 10px;
+                        @include height-width(40px, 40px);
+                        float: left;
+                        @include pos(r, null);  
+                        .badge{
+                            @include pos(a, 0 0 null null);  
+                            @include height-width(16px, 16px);
+                            z-index: 1;
+                            font-size: 9px;
+                            line-height: 16px;
+                            padding: 0;
+                            background-color: $orange;
+                        }
+                        .imgOute{
+                            @include radius(50%);
+                            overflow: hidden;
+                            height: 100%;
+                            background-color: transparent;
+                            img {
+                           
+                                @include imgfit(100%, cover,100%);            
+                            }
+                        }                        
+                    }
+                    h2{
+                        @include text-format-weight(15px, $color-18,$normal);
+                        margin:5px 0 0 0;
+                        @media screen and (max-width: 992px) {
+                            font-size: 14px;
+                        }
+                    }
+                    p{
+                        @include text-format-weight(12px,$color-18,$light);
+                        margin: 0;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+        .inboxRight{
+            width:calc(100% - 365px);
+            padding-left: 50px;
+            @media screen and (max-width: 1300px) {
+                width:calc(100% - 300px);
+                padding-left: 40px;
+            }
+            @media screen and (max-width: 992px) {
+                width:100%;
+                padding:0 15px;
+            }   
+            .profilePhoto {
+                @include radius(50%);
+                overflow: hidden; 
+                @include height-width(54px, 54px);
+                @media screen and (max-width: 767px) {
+                    @include height-width(40px, 40px);   
+                }
+                .imgOute{
+                    img{
+                        height: 54px;
+                        @include imgfit(100%, cover,100%);
+                        @media screen and (max-width: 767px) {
+                            height:40px;
+                        }
+                    }                       
+                }  
+            }             
+            .messageInfo{
+                border-bottom:1px solid #ececec;
+                margin-bottom: 20px;
+                padding-bottom: 10px;
+                .profilePhoto {
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-bottom: 0;              
+                }
+                h2{
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin: 0 0 0 10px;
+                    @include text-format-weight(18px, $black,$medium);
+                    @media screen and (max-width: 1300px) {
+                        font-size: 16px;
+                    }
+                    @media screen and (max-width: 1200px) {
+                        font-size: 14px;
+                    }
+                    a{
+                        color: $black;
+                    }
+                } 
+                .iconList{
+                    text-align: right;
+                    margin-top: 30px;
+                    @media screen and (max-width: 992px) {
+                        margin-top: 15px;
+                    }
+                    @media screen and (max-width: 992px) {
+                        margin-top: 0px;
+                    }
+                    li{
+                        display: inline-block;
+                        padding: 0 10px 0 12px;
+                        @include text-format-weight(15px, $purple,$normal);
+                        cursor: pointer;
+                        @include pos(r, null);
+                        @media screen and (max-width: 992px) {
+                            font-size: 18px;
+                        }
+                        i{
+                            &:before{
+                                color: $purple !important;
+                            }
+                        }
+                        &:before{
+                            @include before-after(absolute, 16px, 1px);
+                            background-color: rgba(0,0,0,0.35);
+                            top: 0px;
+                            left:0;
+                        }
+                        &:first-child{
+                            &:before{
+                                content:none;
+                                padding-left: 0;
+                            }
+                        }
+                        &:last-child{
+                            display: none;
+                            @media screen and (max-width: 992px) {
+                                display: inline-block;
+                            }
+                        }                           
+                    }
+                }
+            }                
+            .dateSec{
+                text-align: center;
+                margin: 15px 0;
+                @include pos(r, null);
+                &:before{
+                    @include before-after(absolute, 1px, 100%);
+                    background-color: rgba($black,0.1);
+                    top: 15px;
+                    left:0;
+                    z-index: -1;
+                }
+                .button{
+                    background-color: #f7f9fc;
+                    border:1px solid rgba($black,0.1);
+                    height:32px;
+                    line-height: 32px;
+                    min-width:120px; 
+                    display: inline-block;
+                    @include radius(20px);
+                    @include text-format-weight(14px,#919191,$normal);   
+                }
+            }
+            .boxMessage{
+                height: calc(100vh - 330px);
+                overflow-y:auto; 
+            }
+            .messageOuter{
+                .profilePhoto {
+                    float:left;
+                    margin-top: 10px;
+                    margin-bottom: 0;
+                    @include height-width(40px, 40px);  
+                    .imgOute{
+                        img{
+                            height: 40px;
+                        }                       
+                    }
+                } 
+                .message {
+                    float:left;
+                    width: auto;
+                    max-width: calc(100% - 220px);
+                    vertical-align: top;
+                    @media screen and (max-width: 992px) {
+                        max-width: calc(100% - 50px);
+                    }
+                    @media screen and (max-width: 767px) {
+                        max-width: calc(100% - 42px);
+                    }
+                    p{
+                       background-color: $white;
+                       border:1px solid #ececec;
+                        @include radius(18px);
+                        @include pos(r, null); 
+                        border-bottom-left-radius: 0;
+                        @include text-format-weight(14px, $black,$normal);
+                        padding:15px 25px;
+                        margin:0 25px;
+                        @media screen and (max-width: 1200px) {
+                           font-size: 13px;
+                        }
+                        @media screen and (max-width: 767px) {
+                            padding:5px 10px;
+                             margin:0 15px;
+                        }
+                        &:before, &:after{
+                            @include pos(a,null null -1px -17px); 
+                            content: '';
+                            border-right: 17px solid #ececec;
+                            border-top: 17px solid transparent;
+                        }
+                        &:after{
+                            border-right: 16px solid #fff;
+                            border-top: 16px solid transparent;
+                            margin: 0px 0 1px 2px;
+                        }
+                    }
+                    h5{
+                        @include text-format-weight(12px, #7a7a7a,$normal);
+                        padding:0 25px;
+                        margin: 15px 0;
+                        @media screen and (max-width: 1200px) {
+                            margin-top: 10px;
+                        }
+                        @media screen and (max-width: 1200px) {
+                            display: block;
+                        }
+                    }
+                } 
+                &.sender{
+                    text-align: right;
+                    .profilePhoto {
+                        float: right;
+                    }
+                    .message {
+                        float: right;
+                        p{
+                            transform: rotatey(180deg);
+                            background-color: #c8d8db;
+                            text-align: left;                            
+                            span{
+                                transform: rotatey(180deg);
+                                display: inline-block;
+                            }
+                            &:after{
+                                border-right: 17px solid #c8d8db;
+                                border-top: 17px solid transparent;
+                            }
+                        }
+                        h5{
+                            transform: rotateX(0deg);
+                            text-align: right;
+                        }
+                    }                    
+                } 
+            }   
+            .messageType{    
+                .form-group {
+                    @include pos(r, null);
+                    margin-top: 20px;
+                    margin-bottom: 0; 
+                    @media screen and (max-width:767px) {
+                        margin-top: 5px;  
+                    } 
+                    input {
+                        &.form-control {
+                            @include appear(none);
+                            border : 0 none;
+                            @include text-format-weight(16px,$black,$normal);
+                            @include radius(6px);
+                            @include box-shadow(0 0 7px rgba(0,0,0,0.1));
+                            padding    : 20px 65px 20px 30px;
+                            background-color: $white;
+                            height     : 60px;
+                            @media screen and (max-width:1200px) {
+                                font-size: 14px;
+                                padding  :5px 25px 5px 15px;
+                                height: 50px;
+                            }
+                        }
+                    }  
+                    .btn {
+                        &.inputBtn {
+                            background-color: transparent;
+                            padding:0;
+                            @include pos(a, 8px 20px null null);
+                            &:focus{
+                                @include box-shadow-none();
+                            }
+                            img{
+                                @media screen and (max-width:1200px) {
+                                    width:34px;
+                                }
+                            }
+                        }
+                    }                        
+                }     
+            }
+        }
+    }
+}

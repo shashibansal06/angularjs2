@@ -1,0 +1,104 @@
+<banner title="Detailed Calendar"></banner>
+<div class="innercontentpage">
+    <div class="container inerPage withoutborder calenderPage">
+        <div class="row">
+            <div class="col-sm-9">
+                <ul class="list-inline calenderTopList">
+                    <li>Fix a whole in the wall</li>
+                    <li>Requried : Plumber</li>
+                    <li>Start Date : 23-01-2017</li>
+                </ul>
+            </div>
+            <div class="form-group col-sm-3">
+                <div class="select-outer smallicon">
+                    <select class="form-control">
+                        <option>Choose a project</option> 
+                        <option>option1</option>
+                        <option>option1</option>
+                    </select>
+                </div>
+            </div>
+        </div> 
+        <div class="row">
+            <div class="col-md-offset-1 col-md-10">
+                <div class="row box">
+                    <div class="col-sm-12 calendarbox">
+                        <img src="assets/images/calendarimg.jpg" alt="" class="img-responsive">
+                    </div>  
+                    <div class="col-sm-12">             
+                        <p> The project will remain open and accepting bids until you accept a bid - We will email you when you have not accepted a bid and there is no availability in your calendar</p>
+                    </div>
+                </div>              
+                <div class="row box">
+                    <div class="col-sm-12">
+                        <div class="table-responsive">
+                            <table class="table customTable inversecustomTable">
+                                <thead>
+                                    <tr> 
+                                        <th colspan="2">Upcoming Appointments</th>
+                                    </tr>
+                                </thead>
+                                <tbody> 
+                                    <tr ng-repeat="upcomming_app in [1,2,3]">
+                                        <td><p>Nov 21th @ 7:30 Am : Leandro Chique approved your appointment request “ Fix a hole in the wall”</p></td>
+                                        <td> 
+                                            <div class="actionDropdown" uib-dropdown dropdown-append-to-body="true" is-open="list">
+                                                <span ng-click="tabel_dropdown(list)" class="icon-threedot" uib-dropdown-toggle>
+                                                </span>
+                                                <ul class="dropdown-menu dropdown_list" uib-dropdown-menu role="menu" aria-labelledby="btn-append-to-body">
+                                                    <li>ShortList</li>
+                                                    <li>Disregard</li>
+                                                    <li>Accept Bid</li>
+                                                    <li>Reject</li>
+                                                    <li>View Bid</li> 
+                                                </ul>
+                                            </div> 
+                                        </td>        
+                                    </tr>                           
+                                </tbody>
+                            </table>
+                        </div>   
+                    </div>
+                </div>  
+                <div class="row box">
+                    <div class="col-sm-12">
+                        <h2>Pending Requests</h2>
+                        <div class="table-responsive">
+                            <table class="table customTable">
+                                <thead>
+                                    <tr> 
+                                        <th>Project Title</th>
+                                        <th>Customer</th>
+                                        <th>Request</th>
+                                        <th>Actions</th>                           
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr  ng-repeat="pending_request in [1,2,3]">
+                                        <td>Fix a hole in the wall</td>
+                                        <td>Cintia Loustalet</td>                    
+                                        <td>24-05-2018 @ 7:30 am</td>
+                                        <td> 
+                                            <div class="actionDropdown" uib-dropdown dropdown-append-to-body="true" is-open="list">
+                                                <span ng-click="tabel_dropdown(list)" class="icon-threedot" uib-dropdown-toggle>
+                                                </span>
+                                                <ul class="dropdown-menu dropdown_list" uib-dropdown-menu role="menu" aria-labelledby="btn-append-to-body">
+                                                    <li>ShortList</li>
+                                                    <li>Disregard</li>
+                                                    <li>Accept Bid</li>
+                                                    <li>Reject</li>
+                                                    <li>View Bid</li> 
+                                                </ul>
+                                            </div> 
+                                        </td>         
+                                    </tr>  
+                                </tbody>
+                            </table>
+                        </div>   
+                    </div>
+                </div>         
+            </div>         
+        </div>         
+    </div>
+</div>
+

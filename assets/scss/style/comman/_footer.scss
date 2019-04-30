@@ -1,0 +1,81 @@
+.footer{
+	background-color: $purple;
+	clear:both;
+	.footbtn{
+		.btn{
+			margin: 40px 0 20px 0;
+			padding:6px 10px;
+			font-size: 15px;
+			font-family: $normal;
+			@media screen and (max-width:767px){ 
+				margin: 20px 0 10px 0;
+			}
+		}
+	}
+	.footLink{		
+		li{
+			@include pos(r, null);
+			@media screen and (max-width:767px){ 
+			    margin: 3px 0px;
+			}
+			a{
+				margin:0 4px 0 0;	
+				letter-spacing: 0.02em;			
+				@include text-format-weight(15px,$white,$normal);
+				@media screen and (max-width:1200px){ 
+					font-size:14px;					
+				}
+				@media screen and (max-width:992px){ 
+					font-size:13px;
+				}
+				&:hover{
+					text-decoration: underline;
+				}
+			}
+			&:after {
+		      	@include pos(a, calc(50% - 7px) 0px auto auto);
+		      	content: "";
+		      	@include height-width(16px,1px);
+		      	background-color: $white;
+		      	font-family: 'icomoon' !important;		           
+		    }
+		    &:last-child{
+		    	&:after {
+		    		content:none;
+		    	}
+		    }
+		}
+	}
+	.socialList{
+		padding: 25px 0;
+		@media screen and (max-width:767px){ 
+			padding: 15px 0;
+		}	
+		li{
+			a{ 
+				font-size: 26px;
+				color: rgba($white,0.5);
+				@media screen and (max-width:767px){ 
+					font-size: 20px;
+				}
+				&:hover , &:focus{
+					color: $white; 
+				}	
+			}
+		}
+	}
+	.copyright{		
+		border-top:1px solid rgba(238,238,238,0.1);
+		padding: 18px 0 15px 0;
+		width: 100%;	
+		@media screen and (max-width:767px){ 
+			padding: 10px 0 5px 0;
+		}	
+		p{
+			@include text-format-weight(15px,rgba($white,0.5),$normal);
+			@media screen and (max-width:767px){ 
+				font-size:13px;			
+			}
+		}
+	}
+}

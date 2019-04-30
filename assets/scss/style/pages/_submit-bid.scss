@@ -1,0 +1,57 @@
+.inerPage{
+	&.submitBidPage{
+		.box{
+			p{
+				@include text-format-weight(14px,$black,$light);
+				line-height: 22px;
+				margin-bottom: 15px;	
+				&.highlight{
+					color:$darkblue-color;
+					font-size: 16px;
+				}			
+			}
+			.selectrestamount{
+				margin:30px 0 16px 0;
+				&.radio-outer{
+				    label{       
+				        &.z_radio{
+				           margin-right: 5px;
+				        }
+				    }
+				} 	
+			}
+			.materialTable{
+				input{
+					@include radius(0px);
+				}
+				td{
+					input,select{
+						min-width: 100px;
+					}
+					.form-group{
+						margin-bottom: 0;
+					}
+					.inc-dec-box{
+						display: flex;
+						button{
+							border: 0 none;
+							background-color: transparent;
+							padding:0; 
+							font-size: 20px;
+							@media screen and (max-width:1200px){
+								font-size: 18px;
+							}
+						}
+						input{
+							margin:0 5px;
+							width: 30px;
+							border: 0 none;
+							text-align: center;
+							min-width: 10px;
+						}
+					}
+				}
+			}
+		}
+	}	
+}

@@ -1,0 +1,278 @@
+.inerPage {
+	.box{
+		&.profileSection{
+			border: 0 none;
+			padding-top: 0;
+			.imgPhoto{
+				@include height-width(139px,139px);		
+				float: left;
+				margin-right: 30px;
+				@include pos(r, null);
+				@media screen and (max-width:992px){
+					margin-right: 15px;
+					@include height-width(80px,80px);		
+				}
+				@media screen and (max-width:767px){
+					float: none;
+					display: block;					
+					margin-right: 0px;
+					margin-bottom: 30px;
+				}
+				.uploadedimg{
+					@include height-width(100%,100%);
+					overflow: hidden;
+					@include radius(30px);		
+					border:5px solid $orange;
+					@media screen and (max-width:992px){
+						border-width:2px;
+						@include radius(20px);
+					}
+					img{
+						@include imgfit(100%, cover,100%);
+					}
+				}
+				.cameraupload{
+			        @include pos(a, null null -23px calc(50% - 23px));
+		        	@include height-width(46px,46px);	
+		        	text-align: center;
+		        	@include radius(50%); 
+		          	background-color: $yellow;
+		          	@media screen and (max-width:767px){
+		          		@include height-width(30px,30px);
+		          		left:calc(50% - 15px);
+		          		bottom: -15px;
+		          	}	        
+			        span{
+			        	color: $black;
+			        	font-size: 18px;
+			        	line-height: 46px;
+			        	@media screen and (max-width:767px){
+			        		line-height: 30px;
+			        		font-size: 12px;
+			        	}
+			        }
+			        input[type="file"]{
+			          	@include pos(a, 0 null null 0);
+			          	height:100%;
+			          	width:100%;
+			          	z-index: 1;
+			          	display: inline-block;
+			          	opacity: 0;
+			          	cursor: pointer;
+			        }
+		      	} 
+			}
+			.ratingbox {
+				.review{				
+					display: block;	
+					margin-top: 15px;
+					margin-left:0;	
+					@media screen and (max-width:992px){
+						margin-top: 10px;
+					}			
+				}
+			}
+			h2{
+				@include text-format-weight(22px,$purple,$medium);
+				padding-top: 20px;
+				margin-bottom: 5px;
+				i{
+					font-size:22px;					
+				}
+				@media screen and (max-width:992px){
+					font-size: 18px;
+					padding-top: 0px;
+				}
+				@media screen and (max-width:767px){
+					padding-top: 0;
+				}				
+			}
+			h4{
+				@include text-format-weight(14px,$black,$normal);
+				margin: 20px 0 5px 0;
+				@media screen and (max-width:767px){
+					margin-top: 10px;
+				}
+			}
+			h3{
+				@include text-format-weight(16px,$black,$medium);
+				margin: 0;
+			} 
+			.addresspreview{
+				@media screen and (max-width:767px){
+					margin-top: 20px;
+				}
+				.righticon{
+					font-size: 30px;
+					margin-top: 22px;
+					display: inline-block;
+					@media screen and (max-width:992px){
+						margin-top: 0;
+						font-size: 20px;
+					}
+				}
+				p{
+					position: relative;
+					padding-left: 30px;
+					margin-top: 15px;
+					@media screen and (max-width:992px){
+						margin-top: 5px;
+					}
+					i{
+						position: absolute;
+						top: 4px;
+						left:0;
+						font-size: 20px;
+						vertical-align: middle;
+						&:before{
+							color: $black;
+						}
+						&.icon-mail{
+							font-size:16px;
+							@media screen and (max-width:992px){
+								font-size: 14px;
+							}
+						}
+					}
+				}
+			}
+		}	
+		.detailsection{
+			p{
+				margin-bottom: 5px;
+				@media screen and (max-width:992px){
+					margin-top: 10px;
+				}
+				i{
+					font-size: 22px;
+					margin-right: 10px;
+					vertical-align: text-bottom;
+				}
+			}
+		}
+	}
+	.finishedproject{
+		.slick-next, .slick-prev {
+			right:-50px;
+			&:before{
+				content:'\e938';
+				font-family: $moonfamily; 
+				opacity: 1;
+				color: $black;
+				@media screen and (max-width:767px){
+					content: none;
+				}
+			}
+		}
+		.slick-prev {
+			right: auto;
+			left: -50px;				
+			&:before{
+				content:'\e937';
+				@media screen and (max-width:767px){
+					content: none;
+				}				
+			}
+		}
+		.item{
+			padding: 0 30px;
+			@media screen and (max-width:992px){
+				padding: 0 15px;
+			}
+			@media screen and (max-width:767px){
+				padding: 0px 10px;
+			}
+			h3{
+				@include text-format-weight(16px,$black,$medium);
+				margin: 25px 0 0 0;	
+				a{
+					color: $black;
+				}		
+			}
+			.shadowbox{
+				margin-top: 20px;
+				@include box-shadow-n(0,0, 10px,rgba($black,0.2));
+				padding: 10px;
+				.imgBox{
+					@include pos(r, null);					
+					@include fluid-ratio(1 0.7, img);
+					overflow: hidden;
+					a{
+						display: inline-block;
+					}
+					@media screen and (max-width:767px){
+						@include fluid-ratio(1 0.5, img);
+					}
+					img{
+						@include imgfit(100%, cover,100%); 
+					}
+				}	
+			}	
+		}
+	}
+	.commentsection{
+		h2{
+			@include text-format-weight(18px,$black,$medium);
+		}
+		.box{
+			padding-left: 15px;
+			padding-right: 15px;
+			&.heading-cutomer{
+				padding-bottom: 10px;
+			}
+		}
+		
+		.media{
+			.media-left{
+				.media-object{
+					@include height-width(70px,70px);
+					border:5px solid #edf2f2;
+					@include radius(15px);
+				}		
+			}
+			.media-body{
+				padding-left: 10px;
+				h3{
+					@include text-format-weight(16px,$black,$medium);
+					margin-top: 15px;
+					@media screen and (max-width:992px){
+						font-size: 14px;
+					}
+				}
+				h5{
+					@include text-format-weight(15px,$black,$normal);
+				}
+			}
+		}
+		.ratingbox{
+			margin-top: 15px;
+			@media screen and (max-width:992px){
+			 	margin-top: 10px;
+			}
+			i{
+				margin-right: 5px;
+				@media screen and (max-width:992px){
+					margin-right: 2px;
+				}
+				&:last-child{
+					margin-right: 0;
+				}
+			}
+			.review{
+				font-size: 18px;
+				font-family: $light;
+				font-weight: 400;
+				@media screen and (max-width:992px){
+					font-size: 14px;
+				}
+			}
+		}
+		p{
+			font-size: 15px;
+			padding-top: 10px;
+			@media screen and (max-width:992px){
+			 	padding-top: 5px;
+			}
+		}
+	}
+}

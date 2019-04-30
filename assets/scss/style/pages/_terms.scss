@@ -1,0 +1,51 @@
+.termsPage{
+	h3{
+		@include text-format-weight(17px,$purple,$medium);
+		line-height: 24px;
+		margin-top: 0;
+		@media screen and (max-width:1200px){
+			font-size: 14px;
+			line-height: 22px;
+		}				
+	}
+	h4{
+		@include text-format-weight(16px,$black,$medium);
+		line-height: 24px;  	
+		margin-top: 20px;
+		margin-bottom: 5px;
+		@media screen and (max-width:1200px){
+			font-size: 14px;
+			line-height: 22px;
+		}				
+	}
+	p{
+		@include text-format-weight(16px,$black,$normal);
+		line-height: 24px;
+		@media screen and (max-width:1200px){
+			font-size: 14px;
+			line-height: 22px;
+		}				
+	}
+	.radio-outer{
+	    label{      
+	        &.z_checked{
+	            @include text-format-weight(16px,$purple,$medium);
+	            @media screen and (max-width:1200px){
+	             	font-size: 14px;
+	            }
+	        }
+	    }
+	}  
+	.viewbtn{
+		padding-top: 35px;
+		@media screen and (max-width:1200px){
+			padding-top: 20px;
+		}
+		.btn{
+			min-width: 180px;
+			padding-right: 20px;
+			padding-left: 20px;
+		}
+	}
+}
+

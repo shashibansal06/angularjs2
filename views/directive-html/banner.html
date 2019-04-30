@@ -1,0 +1,50 @@
+<section class='innerbanner'>
+    <div class='container relative'>
+        <div class='row'>
+            <div class='col-sm-12'>
+                <div class='title text-center'><h1>{{title}}</h1>
+                </div>
+            </div>
+        </div>
+        <div class="bannertabs" ng-if="tabs">
+           
+            <div class='linksquick icon-threeDot' ng-click="quickclass = !quickclass"></div>
+            <form class='searchbox'>
+            	<i class='icon-search' ng-click="openclass = !openclass" ></i>
+                <div ng-class="{'open' : openclass}" class="inputbox">
+                	<input type='text'>
+                	<button class='btn themeBtn orange icon-next' type='submit'></button>
+                </div>
+            </form>
+            <!-- customer tabs start -->
+            <ul ng-if='customertabs' ng-class="{'open' : quickclass}">
+                <li><a href="#" data-ui-sref-active="active" data-ui-sref='main.my-project'>All</a></li>
+                <li><a href="#">Receiving Bids</a></li>
+                <li><a data-ui-sref-active='active'>Ready to Start</a></li>
+                <li><a href="#">In Execution</a></li>
+                <li><a href="#">Completed</a></li>
+                <li><a href="#">Cancelled</a></li>
+            </ul>
+            <!-- customer tabs end -->
+            <!-- profestional tabs start -->
+            <ul ng-if='profestionaltabs' ng-class="{'open' : quickclass}">
+                <li><a href="#" data-ui-sref-active="active" data-ui-sref='main.prof-my-project'>All</a></li>
+                <li><a href="#">Invites</a></li>
+                <li><a data-ui-sref-active='active' data-ui-sref='main.prof-my-project-visits'>Visits</a></li>
+                <li><a href="#">Bids Submitted</a></li>
+                <li><a href="#">In Execution</a></li>
+                <li><a href="#">Completed</a></li>
+                <li><a href="#">Closed/Reported</a></li>
+            </ul>
+            <!-- profestional tabs end -->
+            <!-- manufacturer tabs start -->
+            <ul ng-if='manufacturertabs' ng-class="{'open' : quickclass}">
+                <li><a href="#" data-ui-sref-active="active" data-ui-sref='main.prof-my-project'>All</a></li>
+                <li><a href="#">Approved</a></li>
+                <li><a data-ui-sref-active='active'>Published</a></li>
+                <li><a href="#">Draft</a></li>              
+            </ul>
+            <!-- profestional tabs end -->
+        </div>
+    </div>
+</section>

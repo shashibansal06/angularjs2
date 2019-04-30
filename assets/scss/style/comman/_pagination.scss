@@ -1,0 +1,42 @@
+.custom-pagination{
+  width: 100%;
+  display: block;
+  text-align: center;
+  @include pos(r, null);
+  li{
+    display: inline-block; 
+    margin: 0 2px;
+    &:first-child , &:last-child{
+      margin: 0;
+      @include pos(a, null null null 0);
+      a{      
+        @include text-format-weight(18px,$black,$normal);
+        @media screen and (max-width:992px){
+          font-size: 14px;          
+        }
+      }     
+    }
+    &:last-child{
+      left:auto;
+      right: 0; 
+    }
+    &.active{
+      a{
+        background-color: $orange;
+        @include radius(5px);
+        &.focus{
+          background-color: $orange;
+        }
+      }
+    }
+    a{
+      border: 0 none;
+      @include text-format-weight(19px,#8a8888,$normal);
+      padding: 3px 12px;
+      @media screen and (max-width:767px){
+        font-size: 12px;
+        padding: 2px 7px;
+      }
+    }
+  }
+}

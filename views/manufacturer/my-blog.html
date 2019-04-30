@@ -1,0 +1,54 @@
+<banner tabs="innerBox" manufacturertabs="innerBox1" title="My Blogs"></banner>
+<div class="innercontentpage">
+    <div class="container">
+        <div class="row inerPage withoutborder myprojectpage">
+            <div class="col-sm-12">       
+            <div class="bannerbtn">
+                <div class="project-count">Total Blog Posts : 30</div>
+            </div>   
+
+                <div class="row box"> 
+                    <div class="col-sm-12">
+                        <div class="table-responsive">
+                            <table class="table customTable">
+                                <thead>
+                                    <tr> 
+                                        <th>Blog Title</th>
+                                        <th>Date Submitted</th>
+                                        <th>Date Approved</th>
+                                        <th>Status</th>
+                                        <th>Views</th>
+                                        <th>Actions Items</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="blogRow in [1,2,3]">
+                                        <td>New latest home design pattern blog</td>
+                                        <td>23-04-2018</td>                    
+                                        <td>23-04-2018</td>
+                                        <td>Waiting for Approval</td>         
+                                        <td>0</td>
+                                        <td>
+                                            <div class="actionDropdown" uib-dropdown dropdown-append-to-body="true" is-open="list">
+                                                <span ng-click="tabel_dropdown(list)" class="icon-threedot" uib-dropdown-toggle>
+                                                </span>
+                                                <ul class="dropdown-menu dropdown_list" uib-dropdown-menu role="menu" aria-labelledby="btn-append-to-body">
+                                                    <li>ShortList</li>
+                                                    <li>Disregard</li>
+                                                    <li>Accept Bid</li>
+                                                    <li>Reject</li>
+                                                    <li>View Bid</li> 
+                                                </ul>
+                                            </div>                                            
+                                        </td>
+                                    </tr>  
+                                </tbody>
+                            </table>                           
+                        </div> 
+                    </div>
+                </div>                             
+            </div>         
+        </div> 
+    </div>
+</div>
+

@@ -1,0 +1,155 @@
+.inerPage{
+	&.mycontactsPage{
+		.row{
+		  &.row-25{
+		  	@media screen and (max-width:992px){
+			    margin-left: -15px;
+			    margin-right: -15px;
+			}
+		    [class*="col-"]{
+		    	@media screen and (max-width:992px){
+			      	padding-left: 15px;
+			      	padding-right: 15px;
+			  	}
+		    }
+		  } 
+		}
+		.professtionCount{
+			margin-bottom: 20px;
+			@include text-format-weight(16px,$black,$normal);
+		}
+		.box{
+			@include box-shadow-n(0px, 0px, 8px, rgba($black,0.2%));
+			padding: 15px;
+			margin-bottom: 50px;
+			@media screen and (max-width:767px){
+				margin-bottom: 15px;
+			}
+			.delbtn{
+				button{
+					padding: 0;
+					background-color: transparent;
+					border:0 none;
+					cursor: pointer;
+					@include text-format-weight(24px,$darkblue-color,$normal);
+					&:focus,&:hover{ 
+						outline:0 none;
+						color: $orange;
+					}
+					@media screen and (max-width:992px){
+						font-size: 16px;
+					}
+				}
+			}
+			.ratingbox{
+				margin-bottom: 15px;
+				@media screen and (max-width:992px){
+					margin-bottom: 10px;
+				}
+				@media screen and (max-width:767px){
+					margin-bottom: 5px;
+				}
+			}
+			.imgPhoto{
+				@include height-width(122px,122px);
+				@include radius(30px);
+				overflow: hidden;
+				border:5px solid $orange;
+				float: left;
+				margin-right: 30px;
+				@media screen and (max-width:992px){
+					margin-right: 15px;
+					@include height-width(80px,80px);
+					@include radius(20px);
+					border-width:2px;
+				}
+				@media screen and (max-width:767px){
+					float: none;
+					display: block;
+					margin-right: 0px;
+				}
+				img{
+					@include imgfit(100%, cover,100%);
+				}
+			}
+			h2{
+				@include text-format-weight(22px,$black,$medium);
+				padding-top: 10px;
+				margin-bottom: 10px;
+				@media screen and (max-width:992px){
+					font-size: 18px;
+				}
+				@media screen and (max-width:767px){
+					padding-top: 0;
+				}
+				i{
+					font-size: 26px;
+					vertical-align: text-top;
+					@media screen and (max-width:992px){
+						font-size: 18px;
+					}
+				}
+			}
+			h3{
+				@include text-format-weight(16px,$orange,$medium);
+				margin: 15px 0 0 0;
+			}
+			p{
+				@include text-format-weight(14px,$black,$normal);
+				span{
+					font-size: 15px;
+					font-family: $medium;
+				}
+				&.distance{
+					i{
+						margin-right: 6px;
+						font-size: 16px;
+						vertical-align: text-top;	
+					}
+				}
+			}
+			.skillslist{
+				margin-top: 20px;
+				@media screen and (max-width:992px){
+					margin-top: 15px;
+				}
+				li{
+					@include text-format-weight(17px,$black,$medium);
+					display: inline-block;	
+					@include pos(r, null);
+					padding-right: 5px;
+					@media screen and (max-width:992px){
+						font-size: 14px;
+					}
+					&:after{
+						content:',';
+						@include pos(a, null 0 0 null);						
+					}
+					&:last-child{
+						&:after{
+							content:none;
+						}
+					}
+				}
+			}
+			.moreinfo{
+				border-top:1px solid darken($white,11%);
+				padding-top: 15px;
+				margin-top: 20px;
+				@media screen and (max-width:992px){
+					padding-top: 10px;
+					margin-top: 10px;
+				}
+				li{
+					padding: 5px 0;
+					@include text-format-weight(15px,$black,$normal);
+					@media screen and (max-width:992px){
+						font-size: 14px;
+						padding: 3px 0;
+					}
+				}
+			}
+		}
+	}
+}
+

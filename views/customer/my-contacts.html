@@ -1,0 +1,49 @@
+<banner title="My Contacts"></banner>
+<div class="innercontentpage">
+    <div class="container inerPage mycontactsPage">
+        <div class="row">
+            <div class="col-sm-12">
+                <h5 class="professtionCount">50 Professionals</h5>
+            </div>
+        </div>    
+        <div class="row row-25">           
+            <div class="col-sm-6" ng-repeat="x in mycontacts" > 
+                <div class="box"> 
+                    <div class="delbtn text-right">
+                        <button class="icon-delete-button" ng-click="delete_mycontact($index)"></button>
+                    </div>
+                    <div class="row row-25">
+                        <div class="col-sm-12">
+                            <div class="imgPhoto">
+                                <img src="assets/images/contactimg.jpg" alt="image" class="img-responsive">
+                            </div>
+                            <h2><i class="icon-batch"></i> {{x.Name}}</h2>   
+                            <div ng-init="starvalue = 1" class="ratingbox"> 
+                                <span uib-rating ng-model="starvalue" max="5" state-on="'icon-yellow-star'"  state-off="'icon-grey-star'"></span> 
+                                <b class="review"> {{starvalue}} <span>Reviews</span></b>
+                            </div>
+                            <p>Member Since <span>{{x.date}}</span></p>
+                        </div>
+                    </div>
+                    <ul class="skillslist">
+                        <li>Interior Designer</li>
+                        <li>Plumber</li>
+                        <li>Carpenter</li>
+                        <li>Plasterer</li>
+                        <li>Painter</li> 
+                    </ul>
+                    <ul class="moreinfo">
+                        <li>Trading Name : {{x.tradingName}}</li>
+                        <li>Business Type : {{x.businessType}}</li>
+                    </ul>
+                </div>
+            </div>           
+        </div>
+        <!-- pagination start -->
+        <div class="row">    
+            <pagination></pagination>                    
+        </div>
+        <!-- pagination end -->
+    </div>
+</div>
+

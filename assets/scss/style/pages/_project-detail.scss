@@ -1,0 +1,19 @@
+.inerPage{
+	&.projectDetailPage{
+		.box{
+			.calOuter{
+        margin-top: 30px;
+        @media screen and (max-width: 767px) {
+          margin-top: 20px;
+        }
+				p{
+					margin-top: 20px;
+				}
+				.calbox{
+
+				}
+			}		
+		}
+	}
+}
+

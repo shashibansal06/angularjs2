@@ -1,0 +1,157 @@
+.btn{
+  &.themeBtn{
+    background-color: $darkblue-color;
+    padding:0 10px; 
+    @include radius(5px);
+    border:1px solid $darkblue-color;
+    text-align: center;
+    padding: 10px 5px;
+    @include text-format-weight(18px,$white,$medium);
+    @media screen and (max-width:1200px){
+      font-size: 15px;
+    }
+    @media screen and (max-width:767px){
+      font-size:14px;
+      padding: 5px 5px;
+    }
+    &.lBtn{
+      height:40px;
+      line-height: 40px;
+      font-size: 16px;
+      padding: 0 15px;
+      @media screen and (max-width:$mini-tab){
+        height:34px;
+        line-height: 34px;
+        font-size: 14px;
+      }
+    }
+    &.regular{
+      font-weight: 400;
+    }
+    &:focus{
+      outline: 0 none;
+    } 
+    &:hover{
+      background-color: transparent;
+      color:$darkblue-color;;
+      border-color:$darkblue-color;;
+    }
+    &.height35{
+      height:35px;
+      line-height: 35px;
+    }
+    &.min-width110{
+      min-width: 110px;
+       @media screen and (max-width:479px){
+        min-width: 100%;
+      }
+    }
+    &.min-width150{
+      min-width: 150px;
+       @media screen and (max-width:479px){
+        min-width: 100%;
+      }
+    }
+    &.min-width210{
+      min-width: 210px;
+       @media screen and (max-width:479px){
+        min-width: 100%;
+      }
+    }
+    &.min-width220{
+      min-width: 220px;
+       @media screen and (max-width:479px){
+        min-width: 100%;
+      }
+    }
+    &.min-width165{
+      min-width: 165px;
+      @media screen and (max-width:479px){
+        min-width: 100%;
+      }
+    }
+    &.min-width180{
+      min-width: 180px;
+      @media screen and (max-width:479px){
+        min-width: 100%;
+      }
+    }
+    &.min-width360{
+      min-width: 360px;
+      @media screen and (max-width:479px){
+        min-width: 100%;
+      }
+    }
+    &.min-width240{
+      min-width: 240px;
+      @media screen and (max-width:479px){
+        min-width: 100%;
+      }
+    }    
+    &.yellow{
+      background-color:$yellow;
+      border-color:$yellow;
+      color:$white;
+      &:hover{
+        background-color: transparent;
+        color:$yellow;
+      }
+    }
+    &.orange{
+      background-color: $orange;
+      border-color:$orange;
+      color:$white;
+      &:hover{
+        background-color: transparent;
+        color:$orange;
+      }
+    }
+    &.mehroon{
+      background-color: $mehroon;
+      border-color:$mehroon;
+      color:$white;
+      &:hover{
+        background-color: transparent;
+        color:$mehroon;
+      }
+    }
+    &.navy{
+      background-color: $navyColor;
+      border-color:$navyColor;
+      color:$white;
+      &:hover{
+        background-color: transparent;
+        color:$navyColor;
+      }
+    }
+    &.border-btn{
+      background-color: transparent;
+      border:1px solid $color-d9;
+      &:hover{
+        background-color: $blue-color;
+        color: $white;
+      }  
+      @media screen and (max-width:479px){
+        display: block;
+        white-space: pre-wrap;
+        width: 100%;
+      }
+      &.yellow{
+          border-color:$yellow;
+          color: $yellow;
+          &:hover{
+            color: $white;
+            background-color: $yellow;
+          }
+      }
+      &.lightblue{
+        border-color:$light-blue;
+        color: $light-blue;
+        &:hover{
+          background-color: $light-blue;
+          color: $white;
+        }
+      }
+    }
+  }
+}

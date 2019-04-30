@@ -1,0 +1,17 @@
+.inerPage{
+	&.withoutborder{
+		&.walletPage{
+			.box{
+				&:first-child{
+					margin-bottom: 35px;
+					@media screen and (max-width:1200px){
+						margin-bottom: 25px;
+					}
+					@media screen and (max-width:767px){
+						margin-bottom: 0px;
+					}
+				}
+			}			
+		}		
+	}
+}

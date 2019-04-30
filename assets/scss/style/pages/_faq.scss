@@ -1,0 +1,51 @@
+.faqPage{	
+	.panel-default{
+		margin-bottom: 10px;
+		.panel{
+			&.panel-open{
+				background-color: red;
+			}
+		}
+		.panel-heading{
+			border-color:$color-ef;
+			background-color: $white;
+			padding:0;
+			@include radius(0px);
+		}
+		.panel-title{
+			padding:10px; 
+			@include text-format-weight(18px,$black,$medium);
+			@media screen and (max-width:1200px){
+				font-size: 16px;
+			}		
+			.icon{
+				@include height-width(53px,53px);
+				@include radius(50%);
+				@include display(middle);
+				background-color: #f6f9fa;
+				border:1px solid$color-ef;
+				margin-right: 20px;
+				text-align: center;
+				line-height: 52px;
+				@media screen and (max-width:1200px){
+					margin-right: 10px;
+				}
+				@media screen and (max-width:992px){
+					@include height-width(20px,20px);
+					line-height: 20px;
+					margin:0 5px 5px 0;
+					font-size: 8px;
+				}
+			}
+		}
+		.panel-body{
+			padding: 30px 20px 30px 90px;
+			background-color: #f6f9fa;
+			@include text-format-weight(15px,$black,$normal); 
+			@media screen and (max-width:992px){
+				font-size: 14px;
+				padding: 15px;
+			}
+		}	
+	}
+}

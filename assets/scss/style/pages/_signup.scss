@@ -1,0 +1,166 @@
+.loginSignupPage{
+	padding: 65px 0;
+	@media screen and (max-width:992px){
+		padding: 35px 0;
+	}
+	p{
+		@include text-format-weight(14px,$default,$normal);
+		line-height: 24px;
+	}
+	.loginbox {
+		display: flex;
+		padding: 30px 0;
+		border-bottom: 1px solid $color-e5;
+		@media screen and (max-width:992px){
+			padding: 20px 0;
+		}
+		@media screen and (max-width:767px){
+			display: block;
+			text-align: center;
+		}
+		.feilds{
+			width:368px;
+			@media screen and (max-width:767px){
+				width: 100%;
+				max-width: 400px;
+				display: inline-block;
+			}
+			.radio-outer{
+				padding-top: 5px;
+				@media screen and (max-width:767px){
+					text-align: left;
+				}
+				.forget-pswd{
+					text-align: right;
+					padding-left: 0;
+					@media screen and (max-width:767px){
+						text-align: left;
+						padding-left: 15px;
+						margin-top: 5px;
+					}
+					a{
+						cursor: pointer;
+						@include text-format-weight(16px,$darkblue-color,$normal);
+						&:hover{
+							text-decoration: underline;
+						}
+						@media screen and (max-width:992px){
+							font-size: 15px;
+						}
+						@media screen and (max-width:767px){
+							font-size: 14px;
+						}
+					}
+				}
+			}
+			.form-group{
+				&.submitbtn{
+					margin:28px 0;
+					@media screen and (max-width:767px){
+						margin: 15px 0;	
+					}
+				}
+			}
+			.tagline{
+				p{
+					@include text-format-weight(16px,$color-18,$normal);
+					margin: 0;
+					a{
+						color: $orange;
+						font-weight: 600;
+					}
+				}
+			}	
+		}
+		
+		.or{
+			@include text-format-weight(14px,lighten($black,50%),$normal); 
+			justify-content: center;
+			display: flex;
+			width: 150px;
+			@include pos(r, null);
+			@media screen and (max-width:767px){
+				width: 100%;
+				display: block;
+				padding: 20px 0;
+			}
+			&:before{
+				background-color: $color-e5;
+				@include height-width(100%,1px);
+				content: '';
+				z-index: -1;
+				@include pos(a, 0 calc(50% - 0.5px) null null);
+				@media screen and (max-width:767px){
+					@include height-width(1px,100%);
+					top:calc(50% - 0.5px);
+					right:0;
+				}
+			}			
+			span{
+				align-self:center;
+				padding: 10px;
+				background-color: $white;
+			}
+		}
+		.socialbtns{
+			width: 328px;
+			@media screen and (max-width:767px){
+				width: 100%;
+				text-align: center;
+			}
+			a{
+				text-align: left;
+				margin-bottom: 12px;
+				@media screen and (max-width:767px){
+					width: 51px;
+				    display: inline-block;
+				    vertical-align: top;
+				    margin: 0 5px;
+				    text-align: center;
+				}
+				&:hover{
+					color: $white;
+					opacity: 0.8;
+				}
+				&.btn{
+					padding: 8px 5px;
+				}
+				&.linked{
+					background-color: #0077b5;
+					border-color:#0077b5;
+				}
+				&.facebok{
+					background-color: #4267b2;
+					border-color:#4267b2;
+				}
+				&.twiter{
+					background-color: #64ccf1;
+					border-color:#64ccf1;
+				}
+				&.google-btn{
+					background-color: #f45a4a;
+					border-color:#f45a4a;
+				}
+				i {
+				    font-size: 18px;
+				    @include display(middle);
+				    margin-right: 15px;
+				    padding: 5px 15px;
+				    border-right: 1px solid rgba($white,0.5);
+				    @media screen and (max-width:767px){
+				      	font-size: 20px;
+				      	border:0 none;
+				      	padding: 0;
+				      	margin: 0;
+				    }
+				}
+				span{
+					@include display(middle);
+					@media screen and (max-width:767px){
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,28 @@
+.deleteaccountPage{
+	ul{
+		li{
+			padding: 40px 0;
+			border-top:1px solid darken($white,10%);
+			@media screen and (max-width:992px){
+				padding: 20px 0;
+			} 
+			a{
+				@include text-format-weight(20px,$black,$medium);
+				line-height: 24px;
+				cursor: pointer;
+				@media screen and (max-width:1200px){
+					font-size: 14px;
+					line-height: 22px;
+				}
+				&:hover , &:focus{
+					color: $orange;
+				}				
+			}
+			&:first-child{
+				border: 0 none; 
+				padding-top: 0;
+			}
+		}
+	}
+}
+

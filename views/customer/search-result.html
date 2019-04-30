@@ -1,0 +1,128 @@
+<banner title="Invite a Professional to My Project"></banner>
+<div class="innercontentpage">
+    <div class="container">
+        <div class="row inerPage result_wrapper">          
+            <div class="col-md-3 col-sm-4 sidebar_filter">
+                <!-- blog section start -->
+                <!-- top filters start -->
+                <div class="row filter_title">
+                    <div class="col-md-12">
+                        <h3>FILTERS<button>Reset</button></h3>
+                    </div>
+                </div>
+                <div class="form-group row box">
+                    <div class="col-md-12">
+                        <label>Miles</label>
+                        <div class="select-outer smallicon">
+                            <select class="form-control">
+                                <option>10 Miles</option>
+                                <option>option1</option>
+                                <option>option1</option>
+                            </select>
+                        </div> 
+                    </div> 
+                </div>
+                <div class="form-group row box">
+                    <div class="col-md-12">
+                        <label>Rating</label>
+                        <div class="select-outer smallicon">
+                            <select class="form-control">
+                                <option>5 Star</option>
+                                <option>5 Star</option>
+                                <option>5 Star</option>
+                            </select>
+                        </div> 
+                    </div> 
+                </div>
+                <div class="form-group row box">
+                    <div class="col-md-12">
+                        <label>Miles</label>
+                        <div class="select-outer smallicon">
+                            <select class="form-control">
+                                <option>10 Miles</option>
+                                <option>option1</option>
+                                <option>option1</option>
+                            </select>
+                        </div> 
+                    </div> 
+                </div>
+                <div class="form-group row box radio-outer">
+                    <div class="col-md-12">      
+                        <label>Reviews</label>
+                        <label class="z_radio">
+                            <input type="radio" name="radioInline" checked="checked">
+                            <span>Most Reviewed</span>
+                        </label>
+                        <label class="z_radio">
+                            <input type="radio" name="radioInline">
+                            <span>Recently Reviewed</span>
+                        </label>                                                   
+                    </div>
+                </div>
+                <div class="form-group row box radio-outer"> 
+                    <div class="col-md-12"> 
+                        <label>Trade Association Verified</label>
+                        <label class="z_radio">
+                            <input type="radio" name="radioInline" checked="checked">
+                            <span>Certified</span>
+                        </label>
+                        <label class="z_radio">
+                            <input type="radio" name="radioInline">
+                            <span>Not Certified</span>
+                        </label>
+                    </div> 
+                </div> 
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <a class="btn themeBtn min-width110 orange">Apply</a> 
+                    </div>  
+                </div>
+             
+
+                <!-- top filters end -->
+            </div>
+            <div class="col-md-8 col-md-offset-1 col-sm-8 right_section">
+                <div class="row row-10">
+                    <div class="col-sm-12">
+                        <h5>56 Professionals</h5>
+                    </div>
+                    <div class="col-sm-6 col-md-4" ng-repeat="searchbox in searchinfo">    
+                        <div class="item">
+                            <div class="clearfix top_line">
+                                <div class="pull-left"><i class="icon-heart"></i></div>
+                                <div class="pull-right"><i class="icon-batch"></i></div>
+                            </div>
+                            <div class="imgBox">
+                                <img src="assets/images/blogimg.jpg" alt="blogimg"  class="img-responsive">
+                            </div>
+                            <h3>{{searchbox.Name}}</h3>  
+                            <div ng-init="starvalue = 1" class="ratingbox"> 
+                                <span uib-rating ng-model="starvalue" max="5" state-on="'icon-yellow-star'"  state-off="'icon-grey-star'"></span> 
+                                <!-- <b class="review"> {{starvalue}} <span>Reviews</span></b> -->
+                            </div>  
+                            <p>{{searchbox.title}}</p> 
+                            <h4><i class="icon-info"  ng-click="tooltp = !tooltp"></i></h4>
+                        </div> 
+                        <div class="option_tooltop"  ng-show="tooltp">
+                            <div class="icon-close" ng-click="tooltp = !tooltp"></div>
+                            <ul>
+                                <li>Plumber</li>
+                                <li>Carpenter</li>
+                                <li>Interior Designer</li>
+                                <li>Plasterer</li>
+                            </ul>
+                        </div>                     
+                    </div>                                                    
+                </div>   
+                <div class="row">
+                    <!-- pagination start -->
+                        <pagination></pagination>
+                    <!-- pagination end -->
+                </div>                               
+            </div>
+            
+        </div> 
+    </div>
+</div>
+

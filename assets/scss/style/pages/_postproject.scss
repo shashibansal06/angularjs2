@@ -1,0 +1,18 @@
+.inerPage{
+	&.postProjectPage{		
+		.box{
+			p{
+				@include text-format-weight(14px,$black,$light);
+				line-height: 22px;
+				margin-bottom: 15px;				
+			}	
+			.radio-outer{
+			    label{       
+			        &.z_checked{
+			            @include text-format-weight(14px,$color-18,$medium);
+			        }
+			    }
+			}  
+		}
+	}
+}

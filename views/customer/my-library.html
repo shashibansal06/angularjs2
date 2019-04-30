@@ -1,0 +1,185 @@
+<banner title="My Library"></banner>        
+<div class="innercontentpage">
+    <div class="container">
+        <div class="row inerPage blogPage">
+            <div class="col-md-offset-1 col-md-10">
+                <!-- blog section start -->
+                <!-- top filters start -->
+                <div class="row box pickroomoption">
+                    <div class="col-sm-12">
+                        <label>Pick a Room</label>                  
+                    </div>   
+                    <div class="form-group radio-outer selectRoomOption col-sm-12"> 
+                        <label class="z_radio">
+                            <input type="radio" name="pickroom" checked>
+                            <span class="iconinf">
+                                <i class="icon-hotel"></i>
+                                <em>Entire Home</em>
+                            </span>
+                        </label>
+                        <label class="z_radio">
+                            <input type="radio" name="pickroom">
+                            <span class="iconinf">
+                                <i class="icon-livingroom"></i>
+                                <em>Living Room</em>
+                            </span>
+                        </label>
+                        <label class="z_radio">
+                            <input type="radio" name="pickroom">
+                            <span class="iconinf">
+                                <i class="icon-bed"></i>
+                                <em>Bedroom</em>
+                            </span>
+                        </label>
+                        <label class="z_radio">
+                            <input type="radio" name="pickroom">
+                            <span class="iconinf">
+                                <i class="icon-kitchen"></i>
+                                <em>Kitchen</em>
+                            </span>
+                        </label>                
+                        <label class="z_radio">
+                            <input type="radio" name="pickroom">
+                            <span class="iconinf">
+                                <i class="icon-bath"></i>
+                                <em>Bathroom</em>
+                            </span>
+                        </label>
+                        <label class="z_radio">
+                            <input type="radio" name="pickroom">
+                            <span class="iconinf">
+                                <i class="icon-garage"></i>
+                                <em>Garage</em>
+                            </span>
+                        </label>
+                        <label class="z_radio">
+                            <input type="radio" name="pickroom">
+                            <span class="iconinf">
+                                <i class="icon-park"></i>
+                                <em>Outdoors</em>
+                            </span>
+                        </label>                                           
+                    </div>
+                </div>
+                <div class="filterRow row row-10">       
+                    <div class="form-group col-sm-3">
+                        <div class="select-outer smallicon">
+                            <select class="form-control">
+                                <option>Select Material</option>
+                                <option>option1</option>
+                                <option>option1</option>
+                            </select>
+                        </div> 
+                    </div>
+                    <div class="form-group col-sm-3">
+                        <div class="select-outer smallicon">
+                            <select class="form-control">
+                                <option>Select Market Trends</option>
+                                <option>option1</option>
+                                <option>option1</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-3">
+                        <div class="select-outer smallicon">
+                            <select class="form-control">
+                                <option>Manufacturer Proposal</option>
+                                <option>option1</option>
+                                <option>option1</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-3">
+                        <div class="select-outer smallicon">
+                            <select class="form-control">
+                                <option>Sort By</option>
+                                <option>option1</option>
+                                <option>option1</option>
+                            </select>
+                        </div>
+                    </div>      
+                </div>
+                <!-- top filters end -->
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+              
+                <div class="blogSection">
+                    <div class="row row-40">
+                        <div class="col-sm-6 hello" ng-repeat="blogbox in bloginfo">    
+                           <div class="item">
+                                <div class="imgBox">
+                                    <img src="assets/images/blogimg.jpg" alt="blogimg"  class="img-responsive">
+                                </div>
+                                <h3>{{blogbox.Name}}</h3>   
+                                <p>{{blogbox.description}}</p> 
+                                <h4><i class="icon-calendar"></i> {{blogbox.date}}</h4> 
+                                <ul>
+                                    <li><i class="icon-plus yellow"></i></li>
+                                    <li><i class="icon-delete-button orange" ng-click="delete_row($index)"></i></li>
+                                    <li><i class="icon-share"></i></li> 
+                                </ul> 
+                            </div>                       
+                        </div>                                                    
+                    </div>                  
+                </div>
+                <!-- blog section end -->    
+            </div>
+            <!-- pagination start -->
+            <div class="col-sm-12">
+                <pagination></pagination>
+            </div>
+            <!-- pagination end -->
+        </div> 
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="myModal" class="modal customModal table-modal libraryprojectModal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <!-- Modal content-->
+        <div class="modal-content"> 
+            <div class="modal-header">
+                <button type="button" class="close icon-close" data-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="table-responsive">
+                    <table class="table customTable">
+                        <thead>
+                            <tr> 
+                                <th>Status</th>
+                                <th>Room</th>
+                                <th class="nowrap">Project Title</th>
+                                <th>Professional Required</th>
+                                <th>Payment Due</th>
+                                <th class="nowrap">Start Date | End Date</th>
+                                <th>Project Total</th>
+                                <th>Actions Items</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="nowrap">In Execution</td>
+                                <td>Living Room</td>                    
+                                <td>Fix a hole in the wall</td>
+                                <td>Plasterer</td>         
+                                <td>No</td>                             
+                                <td class="nowrap">23-04-2018 | 29-04-2018</td>
+                                <td>&#36;500</td>                           
+                                <td><a href="#">Add</a></td>
+                            </tr>     
+                            <tr>
+                                <td>In Execution</td>
+                                <td>Living Room</td>                    
+                                <td>Fix a hole in the wall</td>
+                                <td>Plasterer</td>         
+                                <td class="orange">Yes</td>  
+                                <td>23-04-2018 | 29-04-2018</td>
+                                <td>&#36;500</td>                           
+                                <td><a href="#">Add</a></td>
+                            </tr>     
+                        </tbody>
+                    </table>
+                </div>     
+            </div>     
+        </div>
+    </div>
+</div> 

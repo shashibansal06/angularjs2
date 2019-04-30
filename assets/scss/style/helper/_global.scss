@@ -1,0 +1,31 @@
+/* ---------------------------------------------------------------------------------------------------- */
+/* Reset */
+ul,li{
+  list-style: none;
+  margin:0;
+  padding:0;  
+}
+a{
+  color: $blue-color;
+  -webkit-transition: all linear 0.5s;
+    transition: all linear 0.5s;
+    -moz-transition: all linear 0.5s;
+}
+a:focus{
+  outline: 0 none;
+  text-decoration: none; 
+}
+a:hover{
+  text-decoration: none;
+}
+body{
+  font-family: $family !important;
+  color: $default;
+}
+textarea{
+  min-height: 85px;
+}
+.form-control:focus{
+   border-color: $blue-color !important;
+    @include box-shadow-none();
+}

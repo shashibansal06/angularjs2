@@ -1,0 +1,71 @@
+<banner title="URevamp Wallet"></banner>
+<div class="innercontentpage">
+    <div class="container inerPage withoutborder walletPage">       
+        <div class="row box">
+            <div class="col-sm-12">
+                <div class="table-responsive">
+                    <table class="table customTable inversecustomTable withoutborder">
+                        <thead>
+                            <tr> 
+                                <th>URevamp Wallet</th>
+                                <th class="text-right"><a href="#" class="orange underline  ">Transfer to my Account</a></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr> 
+                                <td colspan="2"><p>Funds Available to Transfer : $100,000</p></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><p>Pending Payments from Customers : $50,000</p></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><p>Invoiced Payments : $25,000</p></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><p>Total Amount of Contracts Won YTD : $1,000,000</p></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><p># of Contracts Awarded YTD : 10</p></td>
+                            </tr>                                                          
+                        </tbody>
+                    </table>
+                </div>   
+            </div>
+        </div> 
+        <div class="row box">
+            <div class="col-sm-12">
+                <div class="table-responsive">
+                    <table class="table customTable">
+                        <thead>
+                            <tr> 
+                                <th>Status</th>
+                                <th>Customer Name</th>
+                                <th>Project Title</th>
+                                <th>Professional Required</th>
+                                <th>Total Amount</th>
+                                <th>Paid Amount</th>
+                                <th>Due Amount</th>
+                                <th>Pending Amount</th>
+                                <th>Project Link</th> 
+                            </tr>
+                        </thead>
+                        <tbody> 
+                            <tr ng-repeat="wallet_list in [1,2,3,4]">
+                                <td class="nowrap">In Execution</td>         
+                                <td>Cintia</td>         
+                                <td>Fix a hole in the wall</td>         
+                                <td>Plasterer</td>         
+                                <td>$1000</td>         
+                                <td>$200</td>         
+                                <td>$0</td>         
+                                <td>$800</td>         
+                                <td class="nowrap"><a data-ui-sref="main.prof-project-detailcomplete">Open Project</a></td>
+                            </tr>  
+                        </tbody>
+                    </table>
+                </div>   
+            </div>
+        </div>   
+    </div>
+</div>
+

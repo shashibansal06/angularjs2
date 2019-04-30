@@ -1,0 +1,149 @@
+<banner title="Search for Project to Bid On"></banner>
+<div class="innercontentpage">
+    <div class="container">
+        <div class="row inerPage searchResultPage">  
+            <div class="col-sm-12">  
+                <!-- top filters start -->
+                <div class="row box pickroomoption">
+                    <div class="col-sm-12">
+                        <label>Pick a Room</label>                  
+                    </div>   
+                    <div class="form-group radio-outer selectRoomOption col-sm-12"> 
+                        <label class="z_radio">
+                            <input type="radio" name="pickroom" checked>
+                            <span class="iconinf">
+                                <i class="icon-hotel"></i>
+                                <em>Entire Home</em>
+                            </span>
+                        </label> 
+                        <label class="z_radio">
+                            <input type="radio" name="pickroom">
+                            <span class="iconinf">
+                                <i class="icon-livingroom"></i>
+                                <em>Living Room</em>
+                            </span>
+                        </label>
+                        <label class="z_radio">
+                            <input type="radio" name="pickroom">
+                            <span class="iconinf">
+                                <i class="icon-bed"></i>
+                                <em>Bedroom</em>
+                            </span>
+                        </label>
+                        <label class="z_radio">
+                            <input type="radio" name="pickroom">
+                            <span class="iconinf">
+                                <i class="icon-kitchen"></i>
+                                <em>Kitchen</em>
+                            </span>
+                        </label>                
+                        <label class="z_radio">
+                            <input type="radio" name="pickroom">
+                            <span class="iconinf">
+                                <i class="icon-bath"></i>
+                                <em>Bathroom</em>
+                            </span>
+                        </label>
+                        <label class="z_radio">
+                            <input type="radio" name="pickroom">
+                            <span class="iconinf">
+                                <i class="icon-garage"></i>
+                                <em>Garage</em>
+                            </span>
+                        </label>
+                        <label class="z_radio">
+                            <input type="radio" name="pickroom">
+                            <span class="iconinf">
+                                <i class="icon-park"></i>
+                                <em>Outdoors</em>
+                            </span>
+                        </label>                                           
+                    </div>
+                </div>
+                <div class="filterRow row row-10">       
+                    <div class="form-group col-sm-3">
+                        <div class="select-outer smallicon">
+                            <select class="form-control">
+                                <option>Select Service</option>
+                                <option>option1</option>
+                                <option>option1</option>
+                            </select>
+                        </div> 
+                    </div>
+                    <div class="form-group col-sm-3">
+                        <div class="select-outer smallicon">
+                            <select class="form-control">
+                                <option>Select Distance</option>
+                                <option>option1</option>
+                                <option>option1</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-3">
+                        <div class="cal-outer">
+                            <input type="text" class="form-control" placeholder="Desired Start Date">
+                        </div>                         
+                    </div>    
+                    <div class="form-group col-sm-3">
+                        <div class="cal-outer">
+                            <input type="text" class="form-control" placeholder="Desired End Date">
+                        </div>                         
+                    </div> 
+                    <div class="form-group col-sm-3">
+                        <div class="select-outer smallicon">
+                            <select class="form-control">
+                                <option>Sort By</option>
+                                <option>option1</option>
+                                <option>option1</option>
+                            </select>
+                        </div>
+                    </div>                     
+                </div>
+                <!-- top filters end -->
+                <div class="row searchResultbox">
+                    <div class="col-sm-12">
+                        <div class="table-responsive">
+                            <table class="table customTable">
+                                <thead>
+                                    <tr> 
+                                        <th>Customer</th>
+                                        <th>Professional Required</th>
+                                        <th>Short Description</th>
+                                        <th>Distance</th>
+                                        <th>Desired Start Date</th>
+                                        <th>Desired End Date</th>
+                                        <th>Next Visit Availability?</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="search_list in [1,2,3,4,5]">
+                                        <td class="userinf">
+                                            <div class="imgPhoto">
+                                                <div class="uploadedimg">
+                                                    <img src="assets/images/contactimg.jpg" alt="image" class="img-responsive">
+                                                </div>
+                                            </div>
+                                            <span class="nowrap">Ameet Jones</span>
+                                        </td>
+                                        <td>Interior Designer</td>                    
+                                        <td>Fix a hole in the wall</td>
+                                        <td>5 Miles</td>         
+                                        <td>24-06-2018</td>     
+                                        <td>29-06-2018</td>
+                                        <td>31-05-2018, 4:10 Pm</td>
+                                    </tr>                                    
+                                </tbody>
+                            </table>
+                        </div>   
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- pagination start -->                  
+                        <pagination></pagination>                
+                    <!-- pagination end -->
+                </div>
+            </div> 
+        </div> 
+    </div>
+</div>
+

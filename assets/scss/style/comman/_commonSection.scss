@@ -1,0 +1,756 @@
+.container{
+  &.container-840{
+    max-width: 870px;
+  }
+}
+.relative{
+  position: relative;
+}
+.pt-30{
+  padding-top: 30px;
+  @media screen and (max-width:1200px){
+    padding-top: 20px;
+  }
+  @media screen and (max-width:767px){
+    padding-top: 0px;
+  } 
+}
+.pt-15{
+  padding-top: 15px;
+  @media screen and (max-width:1200px){
+    padding-top: 10px;
+  }
+}
+.message{
+  font-size:12px;
+  margin-top: 5px;
+  text-align: left;
+  &.text-center{
+    text-align: center;
+  }
+  i{
+    font-size: 14px;
+  }
+}
+.nowrap{
+  white-space: nowrap;
+}
+.ratingbox{
+  i{
+    font-size: 22px;
+    cursor: pointer;
+    @media screen and (max-width:992px){
+      font-size: 18px;
+    }
+  }
+  .review{
+    margin-left: 20px;
+    @include text-format-weight(16px,$black,$normal);
+    @media screen and (max-width:992px){
+      font-size: 14px;
+      margin-left: 15px;
+    }
+  }
+}
+.row{
+  &.row-25{
+    margin-left: -25px;
+    margin-right: -25px;
+    [class*="col-"]{
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+  }
+  &.row-40{
+    margin-left: -40px;
+    margin-right: -40px;
+    [class*="col-"]{
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+  &.row-45{
+    margin-left: -45px;
+    margin-right: -45px;
+    [class*="col-"]{
+      padding-left: 45px; 
+      padding-right: 45px;
+    }
+  }
+  &.row-10{
+    margin-left: -10px;
+    margin-right: -10px;
+    @media screen and (max-width:992px){
+      margin-left: -5px;
+      margin-right: -5px;
+    }
+    [class*="col-"]{
+      padding-left: 10px;
+      padding-right:10px;
+      @media screen and (max-width:992px){
+        padding-left: 5px;
+      padding-right:5px;
+      }
+    }
+  }
+  &.row-0{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+/* common classes css end */
+.flex{
+  display: flex;
+  @media screen and (max-width:767px){
+    display: block;
+  }
+  &.noflex{
+    display: flex;
+  }
+}
+
+.dropdown{
+  .dropdown-menu{
+    border:0 none;
+    @include radius(0);
+    ul{
+      padding: 5px 20px;
+      li{
+        display: block;
+        a{
+          display: block;
+          @include text-format-weight(15px,$black,$normal);
+          padding: 25px 0;
+          border-bottom: 1px solid rgba(0,0,0,0.1);
+          @media screen and (max-width:$mini-desktop){
+            padding: 10px 0;
+            font-size: 14px;
+          }
+        }
+        &:last-child{
+          a{
+            border-bottom: 0 none;
+          }
+        }
+      }
+    }
+  }
+}
+.title{
+  margin-bottom: 20px;
+  h1{
+      @include text-format-weight(32px,$purple,$semibold);
+      padding-bottom: 22px;
+      margin: 0px 0 15px 0;
+      @include pos(r, null);
+      @media screen and (max-width:1200px){
+        font-size: 18px;
+        padding-bottom: 15px;
+      }
+      &:before{
+        @include pos(a, null null 0 calc(50% - 26px));
+        @include height-width(4px,52px);
+        background-color: $orange;
+        content: '';
+      }
+  }
+  p{
+      @include text-format-weight(16px,$color-79,$normal);
+      line-height: 27px;
+      @media screen and (max-width:1200px){
+        font-size: 14px;
+      }
+  }
+}
+/* common classes css start */
+.globalPadding{
+  padding: 50px 0 65px;
+}
+.margin-t-0{
+  margin-top: 0;
+}
+.margin-t-20{
+  margin-top: 20px;
+}
+.margin-b-20{
+  margin-bottom: 20px;
+}
+.orange{ 
+  color: $orange;
+}
+.yellow{
+  color: $yellow;
+}
+.green{
+  color: $green;
+}
+.text-danger {  
+  text-align: left;
+  font-size: 12px;  
+}
+textarea{
+  resize:vertical;
+  min-height:200px;
+}
+.padding-tb{   
+  padding:65px 0 65px 0;
+  @media screen and (max-width:992px){
+    padding: 40px 0;
+  }
+}
+.underline{
+  text-decoration: underline;
+}
+.form-group{
+  @include pos(r, null);
+  &.last{
+    margin-bottom: 0;
+  }
+  &.infoiconUter{
+    .infoicon{
+      @include pos(a, 14px 15px null null);
+      cursor: pointer;
+      font-size: 14px;
+      @media screen and (max-width:1200px){
+        top:10px;
+      }
+    }
+  }
+  label{
+    font-weight: normal;
+  }  
+  input,select,textarea{  
+    &.form-control{
+      @include appear(none);
+      @include text-format-weight(15px,$color-18,$normal);
+      @include radius(0px);
+      @include box-shadow-none(none);
+      padding: 11px 30px 11px 15px;
+      transition:none;
+      -moz-transition:none;
+      -webkit-transition:none;
+      border-color:$color-e8;
+      height: auto;
+      background-color: $color-fe;
+      @media screen and (max-width:1200px){
+        font-size: 14px;
+        padding: 8px 30px 8px 10px;
+      }    
+    }  
+  }
+  .select-outer{
+    @include pos(r, null);
+    z-index: 1;
+    &:after {
+      @include pos(a, calc(50% - 4px) 15px auto auto);
+      content: "\e905";
+      font-family: 'icomoon' !important;
+      @include text-format-weight(8px,#646464,$normal);
+      z-index: -1;
+      @media screen and (max-width:1200px){
+        top: calc(50% - 6px);
+        right: 10px;
+        font-size: 10px;
+      }     
+      @media screen and (max-width:992px){
+        font-size: 8px;
+      }          
+    }
+    &.smallicon{
+      &:after {
+        font-size:6px;
+        top:   calc(50% - 2px);            
+      }
+      &.customselect{
+        select{
+          border: 0 none;
+          padding: 0px 15px 0px 0px;
+        }
+        &:after {
+          content: '\e939'; 
+          top:  5px;  
+          right:0;
+          @media screen and (max-width:1200px){
+            top: 8px;
+          }     
+        }
+      }
+    }
+
+    select{
+      @include appear(none);
+      cursor: pointer; 
+       background-color: transparent;     
+    }
+  }
+  .input-chckbox{
+    @include pos(r, null);
+    z-index: 1;
+    .radio-outer{
+      @include pos(a, calc(50% - 10px) 20px null null);
+      @media screen and (max-width:992px){
+        position: static;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .cal-outer{
+    @include pos(r, null);
+    z-index: 1;
+    &:after {
+      @include pos(a, calc(50% - 12px) 15px auto auto);
+      content: "\e91c";
+      font-family: 'icomoon' !important;
+      @include text-format-weight(16px,#646464,$normal);
+      z-index: -1;
+      @media screen and (max-width:1200px){
+        top: calc(50% - 12px);
+        right: 10px;
+        font-size: 18px;
+      }                
+    }  
+    input{
+      background-color: transparent;
+    } 
+  }
+  .fileChoose{
+    @include pos(r, null);
+    button{
+      @include appear(none);
+      @include text-format-weight(15px,$black,$normal);
+      @include radius(0px);
+      @include box-shadow-none(none);
+      padding: 8px 15px;
+      height: auto !important;
+      background-color: $color-18;
+      border: 1px solid #ccc;
+      @include display(middle);
+    }
+    label{
+      @include display(middle);
+      margin-left: 5px;
+      @include text-format-weight(14px,$color-79,$normal);
+    }
+    input{
+      background-color: transparent;
+      padding: 0;
+      border: 0 none;
+      @include pos(a, 0 null null 0);
+      @include height-width(100%,120px);
+      cursor: pointer;
+      opacity: 0;
+    }
+  }
+  .uploaddocBox{
+    margin-top: 15px;
+    .uplddocument{    
+      border: 1px solid $color-d9;
+      text-align: center; 
+      img{
+        width:100%;
+        max-width: 120px;
+        display: inline-block;  
+      }     
+    }
+    span{
+      margin-top: 10px;
+      @include display(middle);
+      @include text-format-weight(13px,$color-18,$normal);
+      cursor: pointer;
+      &.filename{
+        width:calc(100% - 10px);
+      }
+    }
+  }
+  .input-group{
+    border:1px solid $color-cc;
+    input{
+      border:0 none;
+    }
+    .input-group-btn{
+      button{
+        &.btn{
+          border: 0 none;
+          @include radius(0);
+          height:37px;
+          background-color: $color-18;
+          @media screen and (max-width:1200px){
+            height:35px;
+          }
+          &:focus{
+            outline: none; 
+          }
+        }
+      }
+    }
+  }
+}
+.radio-outer{
+  label{
+    &.z_radio{
+        @include pos(r, null);
+        @include text-format(14px,$color-18);
+        font-weight: 400;
+        margin: 0 25px 0 25px;
+        &:first-child{
+          margin-left: 0;
+        }
+        @media screen and (max-width:1400px){
+          	font-size: 14px;
+        }
+         @media screen and (max-width:565px){
+           display: block;
+           margin-bottom: 10px;
+           margin-left: 0;
+        }
+        span{
+            @include padding-left(30);
+            @include pos(r, null);
+            cursor: pointer;
+            &:after {
+              @include pos(a, 3px auto auto 5px);
+              content:none;
+              @include square(10px);
+              background-color:$darkblue-color;  
+              @include radius(50%);
+              @media screen and (max-width:1400px){
+                left:3px;
+                top:2px; 
+              }   
+            }
+            &:before {
+              @include pos(a, -2px auto auto 0px);
+              border:1px solid $color-cc; 
+              content: "";      
+              @include square(20px);
+              @include radius(50%);  
+              @media screen and (max-width:1400px){
+                @include square(16px);
+                top:-1px;
+              }       
+            }
+            i{
+              margin-left:5px;
+              font-size: 16px;
+              vertical-align: text-bottom;
+            }
+            .form-group{
+              display: inline-block;
+              margin-left: 10px;
+               @media screen and (max-width:479px){
+                display: block;
+                margin-left: 0;
+                margin-top: 5px;
+               }
+            }
+        }
+        input[type="radio"]{
+            @include pos(a, 0px auto auto 0px );
+            visibility: hidden;
+            &:checked{
+                &+ span{
+                    &:after{
+                        content:'';
+                    }
+                    &:before {
+                      border-color:$darkblue-color; 
+                    }
+                }
+            }
+        }
+    }
+    &.z_checked{
+        @include pos(r, null);
+        @include text-format-weight(14px,$color-18,$normal);
+       span{
+            @include padding-left(25);
+            @include pos(r, null);
+            cursor: pointer;
+            display: inline-block;
+            &:after {
+              @include pos(a, 1px auto auto 2px );
+              content:'';
+              @include text-format(12px,$color-18);
+              font-family: 'icomoon' !important;
+              @media screen and (max-width:1400px){
+                font-size:12px; 
+                top:1px;
+              }           
+            }
+            &:before {
+              @include pos(a, 2px  auto auto 0px);
+              border:1px solid $color-18; 
+              content: "";      
+              @include square(16px);                            
+            }
+        }
+        input[type="checkbox"]{
+            @include pos(a, 0px auto auto 0px );
+            visibility: hidden;
+            &:checked{
+                &+ span{
+                    &:after{
+                        content:"\e90e";
+                        font-family: 'icomoon' !important;
+                    }      
+                    &:before{
+                        background-color:$transparent-color; 
+                    }
+                }
+            }
+        }
+    }
+  }
+  &.selectRoomOption{
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width:767px){
+      display: block;
+    }
+    label{
+      &.z_radio{
+          cursor: pointer;
+          @include height-width(115px,120px); 
+          margin: 0 0 0 13px;
+          @include display(top);  
+          &:first-child{
+            margin-left: 0;
+            @media screen and (max-width:767px){
+              margin-left: 6px;
+            }
+          }
+          @media screen and (max-width:1200px){
+            @include height-width(100px,102px); 
+            margin-left: 6px;
+            margin-bottom: 15px; 
+          }
+          @media screen and (max-width:991px){
+            @include height-width(94px,94px);                     
+          }
+          @media screen and (max-width:767px){
+            @include height-width(79px,94px);  
+            margin-bottom: 12px;                   
+          }
+          span{
+            text-align: center;
+            @include text-format-weight(16px,#b2b2b2,$normal);
+            border: 1px dashed #b2b2b2;
+            @include height-width(100%,100%);
+            display: inline-block;
+            @include padding-left(0);
+            @include radius(5px);
+            @media screen and (max-width:1200px){
+              font-size: 13px;
+            }
+            &.iconinf{
+              em{
+                display: block;
+                font-style: normal;
+                margin-top: 5px;
+              }
+              i{
+                font-size: 52px;
+                margin-top: 15px;
+                display: block;
+                margin-left:0px;
+                vertical-align: middle;
+                @media screen and (max-width:1200px){
+                  font-size:40px;
+                }
+                @media screen and (max-width:991px){
+                  font-size:36px;
+                }
+                @media screen and (max-width:767px){
+                  font-size:24px;
+                }
+              }
+            }
+            &:after {
+              @include pos(a, auto null -16px calc(50% - 12px));
+              content:none;
+              @include square(auto);
+              background-color:$white;  
+              @include radius(0);
+              @include text-format-weight(22px,$darkblue-color,$moonfamily);
+              padding: 0 2px;
+              font-weight: bold;
+              @media screen and (max-width:767px){
+                bottom: -12px;
+                left:calc(50% - 8px);
+                font-size: 16px;
+              }
+            }
+            &:before {
+              content: none;
+            }                                       
+          }
+          input[type="radio"]{
+            @include square(100%);
+            margin: 0;                   
+            &:checked{
+              &+ span{
+                border-color:$darkblue-color;
+                color:$darkblue-color;
+                  &:after{
+                      content:'\e928';
+                  }                           
+              }
+            }
+          }
+        }      
+      }
+  } 
+}  
+.uploadPhoto{
+  &.fileuploaded{
+    .imgOuter{
+      .userimage{
+        @include radius(0px);
+        //width:98px;
+        //height: auto;
+        //background-color: transparent;
+        @media screen and (max-width:1200px){
+          //width:90px;
+        }
+        @media screen and (max-width:767px){
+          //width:80px;   
+        }
+        img{
+          min-height: 10px;
+          min-width: 10px;          
+        }      
+      }
+    }
+  }
+  &.profilephotos{
+    &.redborder{
+      .imgOuter{
+        .userimage{
+          border-color:$orange;
+        }
+      }
+    }
+    .imgOuter{
+      .userimage{
+        @include radius(30px);
+        @include height-width(134px,134px);
+        border:5px solid #edf2f2;
+        @media screen and (max-width:1200px){
+           @include height-width(120px,120px);
+           @include radius(15px);
+        }
+        @media screen and (max-width:767px){
+          @include height-width(80px,80px);
+        }
+        img{
+          min-height: 100%;
+          min-width: 100%;          
+        }      
+      }
+    }
+  }
+  .imgOuter{
+    margin: 0 12px;
+    @include display(top);
+    @include pos(r, null);
+    &:first-child{
+      margin-left: 0;
+    }
+    @media screen and (max-width:767px){
+      margin: 0 5px 10px 5px; 
+    }
+    .icon-close{
+      background-color: transparent;
+      padding:0;
+      border:0 none;
+      color: $orange;
+      font-size: 13px;
+      @include pos(a, -16px 0 null null);
+    }
+    .filename{
+      @include text-format-weight(14px,$color-18,$normal);
+      display: block;
+      margin-top:8px; 
+    }
+    .userimage{
+      @include radius(6px);
+      @include pos(r, null);
+      @include square(98px);
+      overflow: hidden;
+      @media screen and (max-width:1200px){
+        @include square(90px); 
+      }
+      @media screen and (max-width:767px){
+        @include square(80px);     
+      }
+      img{
+        object-fit:cover;
+        min-height: 100%;
+        min-width: 100%;
+      }
+      .uploadBtn{
+        @include radius(6px);
+        background-color: #ebebeb;
+        @include pos(a, 0 null null 0);
+        @include square(100%);
+        text-align: center;
+        display: table;
+        span{
+          display: table-cell;
+          vertical-align: middle;
+          color: rgba($black,0.14);
+          font-size:30px;
+        }
+        input[type="file"]{
+          @include pos(a, 0 null null 0);
+          height:100%;
+          width:100%;
+          z-index: 1;
+          display: inline-block;
+          opacity: 0;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+.radio-toggle{
+  label{
+    &.z_checked{
+      @include pos(r, null);
+      cursor: pointer;
+      span{
+        width:50px;
+        height:4px;
+        background-color: #4cd864;
+        @include radius(20px);
+        display: inline-block;
+        @include padding-left(30);
+        @include pos(r, null);
+        &:before {
+          @include pos(a, -10px auto auto 1px );
+          @include circle;
+          background-color:#4cd864;
+          content: "";      
+          @include square(24px);
+          @include box-shadow(0px 0px 4px rgba(0,0,0,0.5));
+        }
+      }
+      input[type="checkbox"]{
+        @include pos(a, 0px auto auto 0px );
+        visibility: hidden;
+        &:checked{
+          &+ span{
+            background-color: $green;
+            &:before {
+              @include pos(a, -10px 0px auto auto);                           
+            } 
+          }
+        }
+      }
+    }             
+  }
+}
+

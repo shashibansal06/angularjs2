@@ -1,0 +1,76 @@
+<div class="loginSignupPage">
+    <div class="container container-840">
+        <div class="title text-center">
+            <h1>Login to Manufacturer Account</h1>                
+        </div>
+        <form>
+            <div class="clearfix loginbox"> 
+                <div class="feilds">
+                    <div class="form-group infoiconUter">
+                        <input type="email" class="form-control" placeholder="Email Address">
+                        <div class="infoicon"><i class="icon-info" tooltips tooltip-template="tooltip"></i></div>
+                        <div class="message text-danger">Error Messsage</div>
+                    </div>
+                    <div class="form-group infoiconUter">
+                        <input type="Password" class="form-control" placeholder="Password">
+                        <div class="infoicon"><i class="icon-info" tooltips tooltip-template="tooltip"></i></div>
+                        <div class="message text-success">Success Messsage</div>
+                    </div>
+                    <div class="form-group radio-outer row">
+                        <div class="col-sm-6">
+                            <label class="z_checked">
+                                <input type="checkbox" name="checkboxInline">
+                                <span>Remember Me</span>
+                            </label>
+                        </div>
+                        <div class="col-sm-6 forget-pswd">
+                            <a data-toggle="modal" class="red" data-target="#forgetModal">Forgot Password?</a>
+                        </div>
+                    </div>               
+                    <div class="form-group submitbtn">
+                        <input type="submit" data-ui-sref="main.m_f_my_blog" value="Login" class="btn themeBtn btn-block">
+                    </div>
+                    <div class="tagline">
+                        <p>Don’t have an account? <a data-ui-sref="main.mf_signup">Sign Up</a></p>
+                    </div>
+                </div>
+                <div class="or text-center">
+                    <span>Or</span>
+                </div>
+                <div class="socialbtns">                  
+                    <a href="#" class="btn themeBtn btn-block linked"><i class="icon-linked-i"></i> <span>Continue with Linkedin</span></a>
+                    <a href="#" class="btn themeBtn btn-block facebok"><i class="icon-facebook-i"></i> <span>Continue with Facebook</span></a>
+                    <a href="#" class="btn themeBtn btn-block twiter"><i class="icon-twitter-i"></i> <span>Continue with Twitter</span></a>
+                    <a href="#" class="btn themeBtn btn-block google-btn"><i class="icon-googleplus-i"></i> <span>Continue with Google</span></a>
+                </div>
+            </div>           
+        </form>           
+    </div>
+</div>
+
+<!-- forgot Modal start -->
+<div id="forgetModal" class="modal customModal fade" role="dialog">
+    <div class="modal-dialog">
+    <!-- Modal content-->
+        <div class="modal-content  text-center">    
+            <div class="modal-body forgetpopup">
+            <button type="button" class="close" data-dismiss="modal"><i class="icon-close"></i></button>
+                <div class="title">
+                    <h1>Forgot Password?</h1>                
+                </div>
+                 <p>Enter your Emaill address & we’ll send you a link to reset your password.</p>
+                <div class="row">
+                    <div class="form-group infoiconUter">
+                        <input type="email" class="form-control" placeholder="Email Address">
+                        <div class="infoicon"><i class="icon-info" tooltips tooltip-template="tooltip"></i></div>
+                        <div class="message text-danger">Error Messsage</div>
+                    </div>
+                    <div class="form-group col-xs-12 submitbtn">
+                        <input type="submit" value="Done" class="btn themeBtn orange min-width210">
+                    </div>   
+                </div>       
+            </div>
+        </div>
+    </div>
+</div>
+<!-- forgot Modal end -->

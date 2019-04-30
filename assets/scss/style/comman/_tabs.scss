@@ -1,0 +1,94 @@
+.custom-tabs{
+	ul{
+		&.nav-tabs{
+			border: 0 none;
+			li{
+				display: inline-block;
+				padding: 0 22px;
+				overflow: hidden;
+				margin: 0;
+				@media screen and (max-width:767px){
+					padding: 0 10px;
+				}
+				@media screen and (max-width:479px){
+					width: 49%;	    	
+				} 
+				&.active , &:hover , &:focus{
+					a{
+						background-color: $orange;	
+						color: $white;
+						border:0 none; 
+						&:hover{
+							border:0 none;
+							background-color: $orange;	
+							color: $white;
+						}
+						&:before , &:after {
+						    @include transition(1s linear);
+						    @include pos(a,null null 0 100%);
+						    @include box-shadow-n(-9px, 13px, 0, $orange);
+						    transform: rotate(-8deg);
+						    content: '';
+						    border-bottom-left-radius: 50%;
+						}	
+						&:after {
+						    right: 100%;
+						    left:auto;
+						    @include box-shadow-n(9px, 13px, 0, $orange);
+						    transform: rotate(8deg);						   
+						    border-bottom-left-radius: 0;
+						    border-bottom-right-radius: 50%;
+						}
+							
+					}
+				}
+				a{
+					@include text-format-weight(17px,$white,$semibold);	
+					@include pos(r,null);	
+					background-color: #aaa38e;
+					cursor: pointer;
+					border:0 none; 
+					border-top-right-radius: 20px;
+					border-top-left-radius: 20px;
+					padding: 11px 40px;
+					@media screen and (max-width:767px){
+						font-size: 14px;
+						padding: 8px 10px;
+					}	
+					&:before , &:after {
+					    @include transition(1s linear);
+					    @include pos(a,null null 0 100%);
+					    @include height-width(50px,30px);	
+					    @include box-shadow-n(-9px, 13px, 0, #aaa38e);
+					    transform: rotate(-8deg);
+					    content: '';
+					    border-bottom-left-radius: 50%;
+					    @media screen and (max-width:767px){
+					    	@include height-width(38px,22px);	
+					    }
+					}	
+
+					&:after {
+					    right: 100%;
+					    left:auto;
+					    @include box-shadow-n(9px, 13px, 0, #aaa38e);
+					    transform: rotate(8deg);						   
+					    border-bottom-left-radius: 0;
+					    border-bottom-right-radius: 50%;
+					}										
+				}
+			}
+		}
+	}
+	.tab-content{
+		.tabContentInner{
+			padding: 25px 35px;
+			@include radius(5px);
+			@include box-shadow-n(0, 0, 5px, rgba(0,0,0,0.5)); 
+			@media screen and (max-width:767px){
+				padding: 15px 20px;
+			}
+		}
+	}
+}
+  

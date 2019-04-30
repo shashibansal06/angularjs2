@@ -1,0 +1,193 @@
+<banner title="Project Detail with Bids"></banner>
+<div class="innercontentpage">
+    <div class="container inerPage">
+        <div class="col-sm-12">
+            <div class="row box pickroomoption">
+                <div class="col-sm-12">
+                    <label>Room Type</label>                  
+                </div>   
+                <div class="form-group radio-outer selectRoomOption col-sm-12"> 
+                    <label class="z_radio">
+                        <input type="radio" name="pickroom" checked>
+                        <span class="iconinf">
+                            <i class="icon-hotel"></i>
+                            <em>Entire Home</em>
+                        </span>
+                    </label>                                                       
+                </div> 
+            </div>
+            <div class="row box">
+                <div class="col-sm-4"> 
+                    <h2>Project Title</h2>
+                    <p>Fix the hole in the wall</p>
+                </div>
+                <div class="col-sm-4">
+                    <h2>Professional</h2>
+                    <p>Carpenter</p> 
+                </div>
+                <div class="col-sm-4">
+                    <h2>Desired End Date</h2>
+                    <p>Wednesday 19, Jan 2017</p>
+                </div>
+            </div>
+            <div class="row box">
+                <div class="col-sm-12">
+                    <h2>Description</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy txt
+                    evers since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived ot only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release off Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including vrsnsof Lorem Ipsum</p>
+                </div>
+            </div>
+            <div class="row box">
+                <div class="col-sm-12">
+                    <h2>Customer Address</h2> 
+                    <p>121 Cheert Ridge Road<br>State College<br>144454,<br>New York, USA</p>
+                    <p class="phoneno"><i class="icon-phoneIcon"></i> 8911 123456</p>
+                </div>          
+            </div>
+            <div class="row box">
+                <div class="col-sm-12">
+                    <label>Attach Photos or Files</label>
+                    <div class="uploadPhoto">
+                        <div class="imgOuter">
+                            <button class="icon-close"></button>
+                            <div class="userimage">
+                                <img src="assets/images/photoupload.png" class="img-responsive" alt="">
+                            </div>
+                        </div>
+                        <div class="imgOuter">
+                            <button class="icon-close"></button>
+                            <div class="userimage">
+                                <img src="assets/images/photoupload.png" class="img-responsive" alt="">
+                            </div>                        
+                        </div> 
+                        <div class="imgOuter">
+                            <div class="userimage">
+                                <img src="assets/images/dummyImage.png" class="img-responsive" alt="">
+                                <div class="uploadBtn">
+                                    <input type="file">
+                                    <span><i class="icon-pluscircle"></i></span>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>                   
+                </div>                       
+            </div>
+            <div class="row box">
+                <div class="col-sm-12">
+                    <label>Is there anything you would like to add? Attach saved articles from your URevamp library </label>
+                    <div class="uploadPhoto">
+                        <div class="imgOuter">
+                            <button class="icon-close"></button>
+                            <div class="userimage">
+                                <img src="assets/images/photoupload.png" class="img-responsive" alt="">
+                            </div>    
+                            <span class="filename">Carpenter design</span>
+                        </div>
+                        <div class="imgOuter">
+                            <div class="userimage">
+                                <img src="assets/images/dummyImage.png" class="img-responsive" alt="">
+                                <div class="uploadBtn">
+                                    <input type="file">
+                                    <span><i class="icon-pluscircle"></i></span>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>                       
+            </div> 
+            <div class="row box">
+                <div class="col-sm-12">
+                    <h2>Bids received on this project</h2>
+                    <div class="custom-tabs">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#receivedTab">Received (10)</a></li>
+                            <li><a data-toggle="tab" href="#shortlistedTab">Shortlisted(2)</a></li>
+                            <li><a data-toggle="tab" href="#professionalTab">Disregarded(2)</a></li>
+                            <li><a data-toggle="tab" href="#professionalTab">Accepted(1)</a></li>
+                            <li><a data-toggle="tab" href="#professionalTab">Rejected(2)</a></li>                         
+                        </ul>
+                        <div class="tab-content">
+                            <div id="receivedTab" class="tab-pane fade in active">
+                                <div class="table-responsive">
+                                    <table class="table customTable">
+                                        <thead>
+                                            <tr> 
+                                                <th>Professional</th>
+                                                <th class="nowrap">Bid Price</th>
+                                                <th>Payment Terms</th>
+                                                <th>Includes Materials?</th>
+                                                <th>Proposed Start Date</th>
+                                                <th>Estimated End Date</th>
+                                                <th>Requires Sub-Project?</th>
+                                                <th>Visited?</th>
+                                                <th>Actions</th>                             
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Ameet Jones 
+                                                    <div ng-init="starvalue = 1" class="ratingbox nowrap"> 
+                                                        <span uib-rating ng-model="starvalue" max="5" state-on="'icon-yellow-star'"  state-off="'icon-grey-star'"></span> 
+                                                        <!-- <b class="review"> {{starvalue}} <span>Reviews</span></b> -->
+                                                    </div>
+                                                </td>
+                                                <td>£200</td>                    
+                                                <td>50% downpayment 50% at the end</td>
+                                                <td class="orange">Yes</td>         
+                                                <td>24-05-2018</td>     
+                                                <td>24-05-2018</td>
+                                                <td class="orange">Yes</td>
+                                                <td>No</td>                           
+                                                <td class="orange">Shortlisted</td>
+                                            </tr>   
+                                            <tr>
+                                                <td>Ameet Jones 
+                                                    <div ng-init="starvalue = 1" class="ratingbox nowrap"> 
+                                                        <span uib-rating ng-model="starvalue" max="5" state-on="'icon-yellow-star'"  state-off="'icon-grey-star'"></span> 
+                                                        <!-- <b class="review"> {{starvalue}} <span>Reviews</span></b> -->
+                                                    </div>
+                                                </td>
+                                                <td>£200</td>                    
+                                                <td>50% downpayment 50% at the end</td>
+                                                <td>No</td>         
+                                                <td>24-05-2018</td>     
+                                                <td>24-05-2018</td>
+                                                <td>No</td>                           
+                                                <td>No</td>                           
+                                                <td>
+                                                    <div class="actionDropdown" uib-dropdown dropdown-append-to-body="true" is-open="list">
+                                                        <span ng-click="tabel_dropdown(list)" class="icon-threedot" uib-dropdown-toggle>
+                                                        </span>
+                                                        <ul class="dropdown-menu dropdown_list" uib-dropdown-menu role="menu" aria-labelledby="btn-append-to-body">
+                                                            <li>ShortList</li>
+                                                            <li>Disregard</li>
+                                                            <li>Accept Bid</li>
+                                                            <li>Reject</li>
+                                                            <li>View Bid</li> 
+                                                        </ul>
+                                                    </div> 
+                                                </td>        
+                                            </tr>              
+                                        </tbody>
+                                    </table>
+                                </div> 
+                            </div>
+                            <div id="shortlistedTab" class="tab-pane fade">
+                                
+                            </div>
+                        </div>
+                    </div> 
+                    
+                    <h2>Disclaimer</h2> 
+                    <p>By accepting a bid you are entering into a legal contract with the Professional you have selected, a sample of the contract can be seen <a class="underline orange" href="#">here</a> and it is intended to give you the basic protection you will need. The Professional might ask you to sign an additional contract as required by their Trade Association but the URevamp Renovation contract supersedes any other contract you might sign after accepting this bid, thus the terms you are accepting in this bid would remain unchanged.</p>  
+                </div>
+            </div>             
+            <div class="row text-center bottom-btn">
+                <div class="col-sm-12">
+                   <a href="" class="btn themeBtn min-width240 orange">Invite Professionals</a>                       
+                </div>
+            </div> 
+        </div> 
+    </div>
+</div>
+

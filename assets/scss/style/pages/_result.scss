@@ -1,0 +1,198 @@
+.inerPage{
+	&.result_wrapper{
+		.row{
+			&.row-40{
+				@media screen and (max-width:1200px){
+				    margin-left: -20px;
+				    margin-right: -20px;
+				}
+			    [class*="col-"]{
+			    	@media screen and (max-width:1200px){
+				      	padding-left: 20px;
+				      	padding-right: 20px;
+				    }
+			    }
+			 }
+		}
+		.sidebar_filter{
+			.filter_title{
+				h3{
+					@include text-format-weight(18px,$black,$semibold);
+				}
+				button{
+					@include text-format-weight(16px,#a1a1a1,$medium);
+					background-color: transparent;
+					padding:0;
+					float: right;
+					border:0 none; 
+				}
+			}
+			.box{
+				padding:25px 0;
+				@media screen and (max-width:992px){
+					padding:15px 0;
+				}
+				&.form-group{
+					margin-bottom:0;
+				}
+				&.radio-outer{
+					label{
+						display: block;
+						margin:10px 0;
+						&:first-child{
+							margin-top: 0px; 
+						}
+						&:last-child{
+							margin-bottom: 0px; 
+						}
+					}
+				}
+				.btn{
+					margin-top: 25px;
+				}
+			}
+		}
+		.right_section{
+			@media screen and (max-width:767px){
+				margin-top: 40px;
+			}
+			h5{
+				@include text-format-weight(16px,$black,$normal);
+				margin:0 0 20px 0; 
+				@media screen and (max-width:767px){
+					margin-bottom: 10px;
+				}
+			}
+			.option_tooltop{
+				background-color: $white;
+				@include pos(a,calc(100% - 35px) null null 0);
+				z-index: 1;
+				padding:25px 20px;
+				@include radius(8px);	
+				width: 100%;	
+				@include box-shadow-n(0px, 0px, 8px, rgba($black,0.2%));
+				@media screen and (max-width:992px){
+					padding:15px 10px;
+				}
+				.icon-close{
+					@include pos(a,-5px -4px null null);
+					color: $orange;
+					cursor: pointer;
+					font-size:16px;
+				}
+				ul{
+					li{
+						@include text-format-weight(15px,$black,$normal);
+						display: inline-block;
+						@include pos(r, null);	
+						&:after{
+							content: ',';
+						}
+					}
+				}
+			}
+			.item{
+				margin-bottom: 25px;
+				text-align: center;
+				padding:10px;
+				@include box-shadow-n(0px, 0px, 8px, rgba($black,0.2%));
+				@media screen and (max-width:1200px){
+					margin-bottom: 10px;
+				}				
+				.top_line{
+					i{
+						font-size: 23px;
+						&.icon-batch{
+							font-size: 26px;
+						}
+					}
+				}
+				.imgBox{
+					@include height-width(122px,122px);	
+					overflow: hidden;
+					@include radius(30px);		
+					border:5px solid $orange;	
+					display: inline-block;
+					@media screen and (max-width:992px){
+						@include height-width(80px,80px);
+						@include radius(15px);		
+						border:2px solid $orange;	
+					}
+				}
+				h3{
+					@include text-format-weight(18px,$black,$medium);
+					margin: 15px 0 5px;	
+					@media screen and (max-width:1200px){
+						margin: 15px 0 10px 0;
+						font-size: 16px;
+					}	
+					@media screen and (max-width:992px){
+						font-size: 14px;
+					}		
+				}
+				p{
+					@include text-format-weight(16px,#838383,$normal);
+					line-height: 24px;
+					margin: 15px 0 5px 0;
+					@media screen and (max-width:1200px){
+						font-size: 14px;
+						line-height: 22px;
+					}				
+				}
+				h4{
+					i{
+						cursor:pointer;
+						&:before{
+							font-size: 18px;	
+							color: $purple;					
+						}
+					}
+				}
+				ul{
+					@include display(middle);
+					width: 111px;
+					text-align: right;
+					li{
+						display: inline-block;
+						padding: 0 10px;
+						@include pos(r, null);							
+						i{
+							font-size: 18px;
+							@media screen and (max-width:1200px){
+								font-size: 16px;
+							}		
+						}
+						&:before{
+							@include before-after(absolute,20px,1px);
+							top:0px;
+							left:0;
+							background-color: #dedede;					
+						}
+						&:first-child{
+							padding-left: 0;
+							&:before{
+								content:none;
+							}
+						}
+					}
+				}
+				.imgBox{
+					@include pos(r, null);
+					@include fluid-ratio(1 0.75, img);
+					overflow: hidden;  
+					@media screen and (max-width:767px){
+						@include fluid-ratio(1 0.5, img);
+					}
+					img{
+						@include imgfit(100%, cover,100%); 
+					}
+				}			
+			}	 
+		}
+	}
+}
+
+
+
+
+

@@ -1,0 +1,201 @@
+<div class="headerTop">
+	<div class="logo">
+	   <div class="logoInner"><a href="#"><img src="assets/images/logo.png" alt="logo" class="img-responsive"></a></div>	   
+	</div>	
+	<div class="headerRight">
+		<div ng-if="iscustomer" class="topButtons">
+			<a data-ui-sref="main.complete-profile" class="btn themeBtn border-btn lightblue lBtn regular text-uppercase">Become a professional</a>			
+		</div>			
+			
+		<div class="menuIcon" ng-click="toggle = !toggle" >
+			<img src="assets/images/menu.svg" alt="menu icon" class="img-responsive">
+		</div>	
+		<div  ng-if="isLoggedIn"  class="userProfilebox dropdown">			
+      		<div class="profileImg">
+				<img src="assets/images/user-img.jpg" alt="user image" class="img-responsive">
+			</div>
+			<h2 class="dropdown-toggle" type="button" data-toggle="dropdown">
+				<div class="userStatus">
+					<span class="name">Leandro Chique</span>
+					<span>Customer</span>
+				</div> 
+				<div class="arrow">  
+					<i class="icon-downarrow"></i> 
+				</div>
+			</h2>			
+            <div class="dropdown-menu">  
+                <ul>
+	                <li> 
+	                  	<a>My Profile</a>
+	                </li>
+	                <li>
+	                  	<a data-ui-sref="main.changepassword">Change Password</a>
+	                </li>
+	                <li>
+	                  	<a>Privacy Settings</a>
+	                </li>
+	                <li>
+	                  	<a>Switch to Professional Profile</a>
+	                </li>
+	                <li>
+	                  	<a data-ui-sref="main.urevamp-wallet">URevamp Wallet</a>
+	                </li>
+	                <li>
+	                  	<a data-ui-sref="main.account-setting">Account Settings</a>
+	                </li>
+	                <li>
+	                  	<a>Logout</a>
+	                </li>              
+                </ul>
+            </div>			
+		</div>	
+	</div>
+</div>
+
+<div class="headerbottom clearfix">
+	<nav class="nav" ng-class="{'open' : toggle}">
+		<ul>
+			<li><a href="#" data-ui-sref-active="active">Home</a></li>
+			<li><a data-ui-sref="main.my-project" data-ui-sref-active="active">My PROJECTS</a></li>
+			<li><a data-ui-sref="main.detail-calender" data-ui-sref-active="active">CALENDAR</a></li>		
+			<li><a data-ui-sref="main.my-library" data-ui-sref-active="active">mY LIBRARY</a></li>	
+			<li><a data-ui-sref="main.blog-and-market-trend" data-ui-sref-active="active">BLOG AND MARKET TRENDS</a></li>
+		</ul>                                                    
+	</nav>			
+	<div class="bottomheaderRight">
+		<ul ng-if="post_project" class="list-inline postProjectlink">
+			<li><a data-ui-sref="main.post-project" data-ui-sref-active="active"><i class="icon-plus"></i> <span>post a project</span></a></li>
+		</ul>
+		<ul ng-if="!isLoggedIn" class="list-inline loginLinks">
+			<li><a data-ui-sref="main.signup" data-ui-sref-active="active">Sign Up</a></li>
+			<li><a data-ui-sref="main.login" class="active" data-ui-sref-active="active">Log In</a></li>
+		</ul>
+		<div ng-if="isLoggedIn" class="righticons">   
+			<ul class="list-inline icons">
+				<li><a data-ui-sref-active="active"  ng-click="notificationtoggle()"><i class="icon-bell"></i><span class="badge">1</span></a></li>
+				<li><a data-ui-sref="main.mycontacts" data-ui-sref-active="active"><i class="icon-person"></i></a></li>
+				<!-- uncomment this li if login with professional -->
+				<!-- <li><a data-ui-sref="main.mysaved-projects" data-ui-sref-active="active"><i class="icon-square"></i></a></li> -->
+				<li><a data-ui-sref="main.chat" data-ui-sref-active="active"><i class="icon-msg"></i><span class="badge">1</span></a></li>
+			</ul> 			
+			<div class="notifi-list" ng-class="openClass" closeFlag="closeFlag">
+				<button type="button" class="close"  ng-click="notificationtoggle()"><i class="icon-close"></i></button>
+				<ul>
+					<li class="unread">
+						<a href="#">
+							<div class="profileImg">
+								<img src="assets/images/user-img.jpg" alt="user image" class="img-responsive">
+							</div>	
+							<div class="info">
+								<p>Anny Wick submitted a quote on “Fix a holes in the wall”</p>
+								<span>24-05-2018 10:10 Am</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="profileImg">
+								<img src="assets/images/user-img.jpg" alt="user image" class="img-responsive">
+							</div>	
+							<div class="info">
+								<p>Anny Wick submitted a quote on “Fix a holes in the wall”</p>
+								<span>24-05-2018 10:10 Am</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="profileImg">
+								<img src="assets/images/user-img.jpg" alt="user image" class="img-responsive">
+							</div>	
+							<div class="info">
+								<p>Anny Wick submitted a quote on “Fix a holes in the wall”</p>
+								<span>24-05-2018 10:10 Am</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="profileImg">
+								<img src="assets/images/user-img.jpg" alt="user image" class="img-responsive">
+							</div>	
+							<div class="info">
+								<p>Anny Wick submitted a quote on “Fix a holes in the wall”</p>
+								<span>24-05-2018 10:10 Am</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="profileImg">
+								<img src="assets/images/user-img.jpg" alt="user image" class="img-responsive">
+							</div>	
+							<div class="info">
+								<p>Anny Wick submitted a quote on “Fix a holes in the wall”</p>
+								<span>24-05-2018 10:10 Am</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="profileImg">
+								<img src="assets/images/user-img.jpg" alt="user image" class="img-responsive">
+							</div>	
+							<div class="info">
+								<p>Anny Wick submitted a quote on “Fix a holes in the wall”</p>
+								<span>24-05-2018 10:10 Am</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="profileImg">
+								<img src="assets/images/user-img.jpg" alt="user image" class="img-responsive">
+							</div>	
+							<div class="info">
+								<p>Anny Wick submitted a quote on “Fix a holes in the wall”</p>
+								<span>24-05-2018 10:10 Am</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="profileImg">
+								<img src="assets/images/user-img.jpg" alt="user image" class="img-responsive">
+							</div>	
+							<div class="info">
+								<p>Anny Wick submitted a quote on “Fix a holes in the wall”</p>
+								<span>24-05-2018 10:10 Am</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="profileImg">
+								<img src="assets/images/user-img.jpg" alt="user image" class="img-responsive">
+							</div>	
+							<div class="info">
+								<p>Anny Wick submitted a quote on “Fix a holes in the wall”</p>
+								<span>24-05-2018 10:10 Am</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="profileImg">
+								<img src="assets/images/user-img.jpg" alt="user image" class="img-responsive">
+							</div>	
+							<div class="info">
+								<p>Anny Wick submitted a quote on “Fix a holes in the wall”</p>
+								<span>24-05-2018 10:10 Am</span>
+							</div>
+						</a>
+					</li>
+				</ul>
+				<div class="col-md-12 loadmore_btn">
+                    <a  class="btn themeBtn min-width110 orange" >Load More</a> 
+                </div>
+			</div>
+		</div>                       
+	</div>
+</div>
